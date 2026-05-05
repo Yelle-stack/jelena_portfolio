@@ -18,9 +18,21 @@ const sr = ScrollReveal ({
     distance: '60px',
     duration: 2500,
     delay: 400,
-    reset: true
+    reset: false
 })
 
 sr.reveal('.home-text',{delay:200, origin:'top'})
 sr.reveal('.home-img',{delay:400, origin:'top'})
 sr.reveal('.about-title, .about-text, .heading, .box, input, textarea, .social a',{delay:200, origin:'top'})
+
+/* anti-bot form */
+let startTime = Date.now();
+
+const form = document.querySelector("form");
+
+form.addEventListener("submit", (e) => {
+    if (Date.now() - startTime < 3000) {
+        e.preventDefault();
+        alert("Formulaire envoyé trop rapidement (anti-bot)");
+    }
+});

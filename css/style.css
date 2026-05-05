@@ -1,5 +1,5 @@
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 /* Base font for the entire site */
 * {
@@ -118,6 +118,7 @@ header.shadow{
     padding: 0.8rem 2rem;
     color: #fff;
     font-weight: 500;
+    border-radius: 10px;
 }
 .btn:hover{
     background: var(--main-color);
@@ -255,7 +256,7 @@ margin-top: 2rem;
 .portfolio-container .box .box-img img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* garde l’image entière et lisible */
+  object-fit: cover; /* garde l’image entière et lisible */
   transition: transform 0.4s ease;
 }
 
@@ -308,64 +309,6 @@ margin-top: 2rem;
     transition: 0.2s;
 }
 
-
-
-
-
-
-
-
-
-/*.portfolio-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-.portfolio-container .box{
-    position: relative;
-    height: 220px;
-    box-shadow: 10px 11px 11px rgb(14 55 54 / 15%);
-    overflow: hidden;
-    border-radius: 0.5rem;
-}
-.portfolio-container .box .box-img{
-    width: 100%;
-    height: 100%;
-}
-.portfolio-container .box .box-img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-.portfolio-container .box .content{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background: rgb(28, 40, 68, 0.8);
-}
-.portfolio-container .box .content .bx{
-    padding: 10px;
-    font-size: 24px;
-    border-radius: 4px;
-    background: #fff;
-    color: var(--text-color);
-}
-.portfolio-container .box .content h3{
-    color: #fff;
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin: 10px;
-} */
 .portfolio-container .box:hover .content{
     top: 0;
     transition: 0.2s;
@@ -380,6 +323,13 @@ margin-top: 2rem;
 .contact-form form{
     position: relative;
     width: 400px;
+}
+
+.contact-form label {
+    display: block;
+    margin: 8px 0 4px;
+    font-size: 0.9rem;
+    color: var(--text-color);
 }
 form input,
 form textarea{
@@ -402,6 +352,8 @@ textarea{
     height: 200px;
 }
 form .send-btn{
+    display: block;
+    margin: 1rem auto 0;
     max-width: 110px;
     font-size: 1rem;
     font-weight: 500;
@@ -512,4 +464,29 @@ form .send-btn:hover{
     p{
         font-size: 0.938rem;
     }
+}
+
+/* Portfolio links buttons */
+.links {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.links a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 12px;
+    background: #fff;
+    color: var(--text-color);
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    background: var(--main-color);
+    color: #fff;
 }

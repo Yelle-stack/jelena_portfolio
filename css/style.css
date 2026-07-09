@@ -490,3 +490,48 @@ form .send-btn:hover{
     background: var(--main-color);
     color: #fff;
 }
+
+/* --- TECH STACK --- */
+
+.tech-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+
+.tech-box {
+    border: 2px solid var(--text-color);
+    padding: 20px;
+    border-radius: 0 2rem 0 0;
+    text-align: center;
+    box-shadow: 10px 11px 11px rgb(14 55 54 / 15%);
+    transition: 0.3s ease;
+    background: #fff;
+}
+
+
+.tech-box i {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+
+.tech-box h3 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+
+.tech-box:hover {
+    background: var(--text-color);
+    color: #fff;
+    transform: translateY(-8px);
+}
+
+
+.tech-box:hover i {
+    transform: scale(1.1);
+    transition: 0.3s;
+}

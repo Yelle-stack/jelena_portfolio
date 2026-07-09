@@ -23,7 +23,7 @@ const sr = ScrollReveal ({
 
 sr.reveal('.home-text',{delay:200, origin:'top'})
 sr.reveal('.home-img',{delay:400, origin:'top'})
-sr.reveal('.about-title, .about-text, .heading, .box, input, textarea, .social a',{delay:200, origin:'top'})
+sr.reveal('.about-title, .about-text, .heading, .box, .tech-box, input, textarea, .social a',{delay:200, origin:'top'})
 
 /* anti-bot form */
 let startTime = Date.now();

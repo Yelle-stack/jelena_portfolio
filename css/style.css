@@ -139,7 +139,7 @@ header.shadow{
 }
 .about-title h1{
     color: var(--main-color);
-    font-size: 1.7rem;
+    font-size: 1.6rem;
 }
 .about-title span,
 .heading span {
@@ -186,7 +186,7 @@ margin-top: 2rem;
     text-align: center;
 }
 .heading h1{
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     font-weight: bolder;
     color: var(--main-color);
 }
@@ -424,6 +424,39 @@ form .send-btn:hover{
         background: var(--text-color);
         border: none;
     }
+.home {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-top: 110px;
+}
+
+.home-text {
+    order: 2;
+}
+
+.home-img {
+    order: 1;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.home-img img {
+    width: 240px;
+    max-width: 90%;
+}
+
+.home-text h1 {
+    font-size: 2.3rem;
+}
+
+.home-text h2 {
+    font-size: 1.2rem;
+}
+
+.home-text p {
+    font-size: 0.95rem;
+}
     .home-text span{
         font-size: 1rem;
     }
@@ -436,6 +469,17 @@ form .send-btn:hover{
     .home-text p br{
         display: contents;
     }
+    .tech-container{
+    grid-template-columns: repeat(2,1fr);
+}
+
+.tech-box{
+    padding:15px;
+}
+
+.tech-box i{
+    font-size:40px;
+}
 }
 @media (max-width: 618px){
     .home-img{

@@ -1,38 +1,82 @@
-let menu = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
-let header = document.querySelector('header');
+// DOM Elements
 
-menu.onclick = () => {
-    menu.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
-}
-window.onscroll = () => {
-        menu.classList.remove('bx-x');
-        navbar.classList.remove('active');
-}
-window.addEventListener('scroll', () => {
-    header.classList.toggle('shadow', window.scrollY > 0);
-});
-
-const sr = ScrollReveal ({
-    distance: '60px',
-    duration: 2500,
-    delay: 400,
-    reset: false
-})
-
-sr.reveal('.home-text',{delay:200, origin:'top'})
-sr.reveal('.home-img',{delay:400, origin:'top'})
-sr.reveal('.about-title, .about-text, .heading, .box, .tech-box, input, textarea, .social a',{delay:200, origin:'top'})
-
-/* anti-bot form */
-let startTime = Date.now();
-
+const menu = document.querySelector("#menu-icon");
+const navbar = document.querySelector(".navbar");
+const header = document.querySelector("header");
 const form = document.querySelector("form");
+const year = document.getElementById("year");
 
-form.addEventListener("submit", (e) => {
-    if (Date.now() - startTime < 3000) {
-        e.preventDefault();
-        alert("Formulaire envoyé trop rapidement (anti-bot)");
+// Mobile Menu
+
+if (menu && navbar) {
+    menu.addEventListener("click", () => {
+        menu.classList.toggle("bx-x");
+        navbar.classList.toggle("active");
+    });
+}
+
+// Header Shadow + Close Menu
+
+window.addEventListener("scroll", () => {
+
+    if (menu && navbar) {
+        menu.classList.remove("bx-x");
+        navbar.classList.remove("active");
     }
+
+    if (header) {
+        header.classList.toggle("shadow", window.scrollY > 0);
+    }
+
 });
+
+// Current Year
+
+if (year) {
+    year.textContent = new Date().getFullYear();
+}
+
+// ScrollReveal Animations
+
+const sr = ScrollReveal({
+    distance: "60px",
+    duration: 2500,
+    delay: 300,
+    reset: false
+});
+
+sr.reveal(".home-text", {
+    origin: "left"
+});
+
+sr.reveal(".home-img", {
+    delay: 400,
+    origin: "right"
+});
+
+sr.reveal(
+    ".about-title, .about-text, .heading, .box, .tech-box, input, textarea, .social a",
+    {
+        origin: "bottom",
+        interval: 100
+    }
+);
+
+// Anti-bot Protection
+
+const startTime = Date.now();
+
+if (form) {
+
+    form.addEventListener("submit", (e) => {
+
+        const elapsedTime = Date.now() - startTime;
+
+        if (elapsedTime < 5000) {
+            e.preventDefault();
+            alert("Please wait a few seconds before submitting the form.");
+        }
+
+    });
+
+}

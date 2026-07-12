@@ -13,6 +13,14 @@ if (menu && navbar) {
         menu.classList.toggle("bx-x");
         navbar.classList.toggle("active");
     });
+
+    // Close mobile menu when a navigation link is clicked
+    document.querySelectorAll(".navbar a").forEach((link) => {
+        link.addEventListener("click", () => {
+            menu.classList.remove("bx-x");
+            navbar.classList.remove("active");
+        });
+    });
 }
 
 // Header Shadow + Close Menu

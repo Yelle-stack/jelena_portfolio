@@ -61,6 +61,9 @@ header.shadow{
     font-weight: 600;
     color: var(--text-color);
 }
+.logo:hover{
+    background: transparent;
+}
 .navbar {
     display: flex;
 }

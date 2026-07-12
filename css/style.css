@@ -50,7 +50,7 @@ header{
     align-items: center;
     justify-content: space-between;
     background: #fff;
-    padding: 18px 10%;
+    padding: 14px 20px;
     transition: 0.2s;
 }
 header.shadow{
@@ -59,7 +59,6 @@ header.shadow{
 .logo{
     font-size: 1.1rem;
     font-weight: 600;
-    padding:6px 0;
     color: var(--text-color);
 }
 .logo{

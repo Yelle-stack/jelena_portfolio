@@ -31,6 +31,5 @@ Web3Forms API
 
 Feel free to reach out for collaboration or freelance opportunities:
 
-📧 Email: jelena@sitedevelopper.com
-💼 LinkedIn: https://www.linkedin.com/in/jelena-zekovic-93a774372/
+📧 Email: creation.siteweb@yahoo.com
 🐙 GitHub: https://github.com/Yelle-stack

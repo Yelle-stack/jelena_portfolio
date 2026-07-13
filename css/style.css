@@ -92,9 +92,12 @@ header.shadow{
     width: 100%;
     min-height: 100vh;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(17rem,1fr));
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 1.5rem;
+    gap: 4rem;
+}
+.home-text{
+    max-width: 600px;
 }
 .home-text span{
     font-size: 1.4rem;
@@ -113,9 +116,14 @@ header.shadow{
     margin: 0.7rem 0 1rem;
 }
 .home-img{
-    padding: 40px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
 }
+
 .home-img img{
+    width: 100%;
+    max-width: 520px;
     border-radius: 45%;
 }
 .btn{
@@ -480,42 +488,39 @@ form .send-btn:hover{
         background: var(--text-color);
         border: none;
     }
-}
-.home {
-    grid-template-columns: 1fr;
-    text-align: center;
-    padding-top: 110px;
-}
-
-.home-text {
+    .home {
+       grid-template-columns: 1fr;
+       text-align: center;
+       padding-top: 110px;
+    }
+    .home-text {
     order: 2;
-}
+    }
 
-.home-img {
-    order: 1;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
+    .home-img {
+      order: 1;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    .home-img img {
+      width: 240px;
+      max-width: 90%;
+    }
 
-.home-img img {
-    width: 240px;
-    max-width: 90%;
-}
+    .home-text h1 {
+      font-size: 2.3rem;
+    }
 
-.home-text h1 {
-    font-size: 2.3rem;
-}
+    .home-text h2 {
+      font-size: 1.2rem;
+    }
 
-.home-text h2 {
-    font-size: 1.2rem;
-}
-
-.home-text p {
-    font-size: 0.95rem;
-}
+    .home-text p {
+      font-size: 0.95rem;
+    }
     .home-text span{
-        font-size: 1rem;
+      font-size: 1rem;
     }
     .home-text h1{
         font-size: 2.4rem;
@@ -527,15 +532,15 @@ form .send-btn:hover{
         display: contents;
     }
     .tech-container{
-    grid-template-columns: repeat(2,1fr);
-}
+      grid-template-columns: repeat(2,1fr);
+   }
 
-.tech-box{
-    padding:15px;
-}
-
-.tech-box i{
-    font-size:40px;
+   .tech-box{
+      padding:15px;
+   }
+   .tech-box i{
+      font-size:40px;
+   }
 }
 @media (max-width: 618px){
     .home-img{

@@ -121,7 +121,9 @@ header.shadow{
 .home-img img{
     width: 100%;
     max-width: 520px;
-    border-radius: 45%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 20px;
 }
 .btn{
     display: inline-block;

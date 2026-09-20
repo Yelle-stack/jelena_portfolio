@@ -63,7 +63,7 @@ sr.reveal(".home-img", {
 });
 
 sr.reveal(
-    ".about-title, .about-text, .heading, .box, .tech-box, input, textarea, .social a",
+    ".about-title, .about-text, .heading, .box, .tech-box, .stack-category, .expertise-box, input, textarea, .social a",
     {
         origin: "bottom",
         interval: 100

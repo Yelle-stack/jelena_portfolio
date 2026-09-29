@@ -5,6 +5,36 @@ const navbar = document.querySelector(".navbar");
 const header = document.querySelector("header");
 const form = document.querySelector("form");
 const year = document.getElementById("year");
+const themeToggle = document.querySelector("#theme-toggle");
+
+// Dark Mode
+
+if (themeToggle) {
+
+    // Load saved theme
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+        themeToggle.classList.remove("bx-moon");
+        themeToggle.classList.add("bx-sun");
+    }
+
+    themeToggle.addEventListener("click", () => {
+
+        document.body.classList.toggle("dark-mode");
+
+        const isDarkMode = document.body.classList.contains("dark-mode");
+
+        themeToggle.classList.toggle("bx-moon", !isDarkMode);
+        themeToggle.classList.toggle("bx-sun", isDarkMode);
+
+        localStorage.setItem(
+            "theme",
+            isDarkMode ? "dark" : "light"
+        );
+    });
+}
 
 // Mobile Menu
 

@@ -17,6 +17,7 @@
     --text-color: #1c2844;
     --light-bg: #f7f8fc;
     --card-bg: #ffffff;
+    --body-bg: #ffffff;
 }
 
 section {
@@ -29,7 +30,8 @@ img {
 
 body {
     color: var(--text-color);
-    background: #fff;
+    background: var(--body-bg);
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 *::selection {
@@ -38,9 +40,7 @@ body {
 }
 
 
-/* ================================
-   CUSTOM SCROLLBAR
-================================ */
+/* CUSTOM SCROLLBAR */
 
 html::-webkit-scrollbar {
     width: 0.5rem;
@@ -56,9 +56,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 
-/* ================================
-   HEADER
-================================ */
+/* HEADER */
 
 header {
     position: fixed;
@@ -111,10 +109,23 @@ header.shadow {
     display: none;
 }
 
+/* DARK MODE TOGGLE */
 
-/* ================================
-   HOME
-================================ */
+#theme-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: 0.3s ease;
+    margin-left: 15px;
+}
+
+#theme-toggle:hover {
+    color: var(--main-color);
+    transform: rotate(20deg);
+}
+
+
+/* HOME */
 
 .home {
     position: relative;
@@ -166,9 +177,7 @@ header.shadow {
 }
 
 
-/* ================================
-   BUTTON
-================================ */
+/* BUTTON */
 
 .btn {
     display: inline-block;
@@ -186,9 +195,7 @@ header.shadow {
 }
 
 
-/* ================================
-   ABOUT
-================================ */
+/* ABOUT */
 
 .about {
     display: grid;
@@ -240,9 +247,7 @@ header.shadow {
 }
 
 
-/* ================================
-   SOCIAL
-================================ */
+/* SOCIAL */
 
 .social {
     display: flex;
@@ -265,9 +270,7 @@ header.shadow {
 }
 
 
-/* ================================
-   SECTION HEADINGS
-================================ */
+/* SECTION HEADINGS */
 
 .heading {
     text-align: center;
@@ -281,9 +284,7 @@ header.shadow {
 }
 
 
-/* ================================
-   TECH STACK
-================================ */
+/* TECH STACK */
 
 .techstack {
     background: var(--light-bg);
@@ -368,9 +369,7 @@ header.shadow {
 }
 
 
-/* ================================
-   WHAT I BUILD
-================================ */
+/* WHAT I BUILD */
 
 .expertise {
     background: #fff;
@@ -427,9 +426,7 @@ header.shadow {
 }
 
 
-/* ================================
-   SERVICES
-================================ */
+/* SERVICES */
 
 .services-container {
     display: grid;
@@ -478,9 +475,7 @@ header.shadow {
 }
 
 
-/* ================================
-   PORTFOLIO
-================================ */
+/* PORTFOLIO */
 
 .portfolio {
     background: var(--light-bg);
@@ -606,9 +601,7 @@ header.shadow {
 }
 
 
-/* ================================
-   CONTACT
-================================ */
+/* CONTACT */
 
 .contact-form {
     display: flex;
@@ -678,9 +671,7 @@ form .send-btn {
 }
 
 
-/* ================================
-   FOOTER
-================================ */
+/* FOOTER */
 
 .footer {
     background: var(--text-color);
@@ -728,10 +719,76 @@ form .send-btn {
     font-size: 0.9rem;
 }
 
+/* DARK MODE */
 
-/* ================================
-   RESPONSIVE — TABLET
-================================ */
+body.dark-mode {
+    --body-bg: #111827;
+    --text-color: #e5e7eb;
+    --light-bg: #1f2937;
+    --card-bg: #172033;
+}
+
+/* Header */
+
+body.dark-mode header {
+    background: #111827;
+}
+
+/* Mobile navigation */
+
+body.dark-mode header .navbar {
+    background: #111827;
+}
+
+/* Sections */
+
+body.dark-mode .expertise,
+body.dark-mode .services-container .box {
+    background: var(--body-bg);
+}
+
+/* Tech cards */
+
+body.dark-mode .tech-box {
+    background: var(--card-bg);
+}
+
+/* Expertise cards */
+
+body.dark-mode .expertise-container .box {
+    background: var(--card-bg);
+}
+
+/* Portfolio */
+
+body.dark-mode .portfolio {
+    background: var(--light-bg);
+}
+
+body.dark-mode .portfolio-container .box {
+    background: var(--card-bg);
+}
+
+/* Services */
+
+body.dark-mode .services-container .box {
+    background: var(--card-bg);
+}
+
+/* Contact labels */
+
+body.dark-mode .contact-form label {
+    color: var(--text-color);
+}
+
+/* Dark mode icon */
+
+body.dark-mode #theme-toggle {
+    color: #facc15;
+}
+
+
+/* RESPONSIVE — TABLET */
 
 @media (max-width: 991px) {
 
@@ -746,9 +803,7 @@ form .send-btn {
 }
 
 
-/* ================================
-   RESPONSIVE — SMALL LAPTOP
-================================ */
+/* RESPONSIVE — SMALL LAPTOP */
 
 @media (max-width: 881px) {
 
@@ -771,9 +826,7 @@ form .send-btn {
 }
 
 
-/* ================================
-   RESPONSIVE — MOBILE
-================================ */
+/* RESPONSIVE — MOBILE */
 
 @media (max-width: 768px) {
 
@@ -905,9 +958,7 @@ form .send-btn {
 }
 
 
-/* ================================
-   RESPONSIVE — SMALL MOBILE
-================================ */
+/* RESPONSIVE — SMALL MOBILE*/
 
 @media (max-width: 618px) {
 
@@ -926,9 +977,7 @@ form .send-btn {
 }
 
 
-/* ================================
-   RESPONSIVE — VERY SMALL MOBILE
-================================ */
+/* RESPONSIVE — VERY SMALL MOBILE */
 
 @media (max-width: 350px) {
 

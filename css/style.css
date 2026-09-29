@@ -13,11 +13,15 @@
 }
 
 :root {
-    --main-color: #0b178f;
-    --text-color: #1c2844;
-    --light-bg: #f7f8fc;
-    --card-bg: #ffffff;
-    --body-bg: #ffffff;
+    --main-color: #4f6df5;
+    --text-color: #e5e7eb;
+    --light-text: #cbd5e1;
+    --dark-text: #111827;
+    --light-bg: #1f2937;
+    --card-bg: #172033;
+    --body-bg: #111827;
+    --border-color: #374151;
+    --accent-hover: #6d83ff;
 }
 
 section {
@@ -67,13 +71,13 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #fff;
+    background: var(--body-bg);
     padding: 14px 20px;
     transition: 0.2s;
 }
 
 header.shadow {
-    box-shadow: 0 0 4px rgb(14 55 54 / 15%);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
 }
 
 .logo {
@@ -98,7 +102,7 @@ header.shadow {
 }
 
 .navbar a:hover {
-    background: var(--text-color);
+    background: var(--main-color);
     color: #fff;
 }
 
@@ -107,7 +111,9 @@ header.shadow {
     cursor: pointer;
     z-index: 10001;
     display: none;
+    color: var(--text-color);
 }
+
 
 /* DARK MODE TOGGLE */
 
@@ -144,6 +150,7 @@ header.shadow {
 .home-text span {
     font-size: 1.4rem;
     font-weight: 600;
+    color: var(--text-color);
 }
 
 .home-text h1 {
@@ -154,13 +161,18 @@ header.shadow {
 .home-text h2 {
     font-size: 1.6rem;
     font-weight: bolder;
+    color: var(--text-color);
 }
 
 .home-text p {
     font-weight: 400;
     margin: 0.7rem 0 1rem;
     line-height: 1.7;
+    color: var(--light-text);
 }
+
+
+/* HOME IMAGE */
 
 .home-img {
     display: flex;
@@ -181,7 +193,7 @@ header.shadow {
 
 .btn {
     display: inline-block;
-    background: var(--text-color);
+    background: var(--main-color);
     padding: 0.8rem 2rem;
     color: #fff;
     font-weight: 500;
@@ -190,8 +202,8 @@ header.shadow {
 }
 
 .btn:hover {
-    background: var(--main-color);
-    letter-spacing: 2px;
+    background: var(--accent-hover);
+    letter-spacing: 1px;
 }
 
 
@@ -211,7 +223,7 @@ header.shadow {
 }
 
 .about-title h1 {
-    color: var(--main-color);
+    color: var(--text-color);
     font-size: 1.6rem;
 }
 
@@ -223,6 +235,7 @@ header.shadow {
 .about-title h2 {
     font-size: 1rem;
     font-weight: 500;
+    color: var(--light-text);
 }
 
 .about-img {
@@ -244,6 +257,7 @@ header.shadow {
     text-align: justify;
     margin-bottom: 1rem;
     line-height: 1.7;
+    color: var(--light-text);
 }
 
 
@@ -261,12 +275,13 @@ header.shadow {
     color: #fff;
     padding: 10px;
     border-radius: 4px;
-    background: var(--text-color);
+    background: var(--main-color);
     transition: 0.3s ease;
 }
 
 .social a .bx:hover {
-    background: var(--main-color);
+    background: var(--accent-hover);
+    transform: translateY(-3px);
 }
 
 
@@ -280,7 +295,11 @@ header.shadow {
 .heading h1 {
     font-size: 1.6rem;
     font-weight: bolder;
-    color: var(--main-color);
+    color: var(--text-color);
+}
+
+.heading span {
+    color: var(--text-color);
 }
 
 
@@ -291,9 +310,7 @@ header.shadow {
 }
 
 
-/* Category titles:
-   Frontend / Backend / Tools & CMS
-*/
+/* CATEGORY TITLES */
 
 .stack-category {
     text-align: center;
@@ -327,7 +344,7 @@ header.shadow {
 }
 
 
-/* Tech cards */
+/* TECH CARDS */
 
 .tech-container {
     display: grid;
@@ -337,31 +354,39 @@ header.shadow {
 }
 
 .tech-box {
-    border: 2px solid var(--text-color);
+    border: 2px solid var(--border-color);
     padding: 20px;
     border-radius: 0 2rem 0 0;
     text-align: center;
-    box-shadow: 10px 11px 11px rgb(14 55 54 / 15%);
+    box-shadow: 10px 11px 11px rgba(0, 0, 0, 0.2);
     transition: 0.3s ease;
-    background: #fff;
+    background: var(--card-bg);
+    color: var(--text-color);
 }
 
 .tech-box i {
     display: block;
     font-size: 45px;
     margin-bottom: 15px;
+    color: var(--main-color);
     transition: 0.3s ease;
 }
 
 .tech-box h3 {
     font-size: 1rem;
     font-weight: 600;
+    color: var(--text-color);
 }
 
 .tech-box:hover {
-    background: var(--text-color);
+    background: var(--main-color);
     color: #fff;
     transform: translateY(-8px);
+}
+
+.tech-box:hover i,
+.tech-box:hover h3 {
+    color: #fff;
 }
 
 .tech-box:hover i {
@@ -372,7 +397,7 @@ header.shadow {
 /* WHAT I BUILD */
 
 .expertise {
-    background: #fff;
+    background: var(--body-bg);
 }
 
 .expertise-container {
@@ -384,12 +409,12 @@ header.shadow {
 
 .expertise-container .box {
     text-align: center;
-    border: 2px solid var(--text-color);
+    border: 2px solid var(--border-color);
     padding: 25px 20px;
     border-radius: 0 2rem 0 0;
-    box-shadow: 10px 11px 11px rgb(14 55 54 / 15%);
+    box-shadow: 10px 11px 11px rgba(0, 0, 0, 0.2);
     transition: 0.3s ease;
-    background: #fff;
+    background: var(--card-bg);
 }
 
 .expertise-container .box i {
@@ -399,7 +424,7 @@ header.shadow {
     padding: 12px;
     color: #fff;
     font-size: 26px;
-    background: var(--text-color);
+    background: var(--main-color);
     border-radius: 6px;
     transition: 0.3s ease;
 }
@@ -407,22 +432,29 @@ header.shadow {
 .expertise-container .box h2 {
     font-size: 1.1rem;
     margin: 1rem 0 0.6rem;
+    color: var(--text-color);
 }
 
 .expertise-container .box p {
     line-height: 1.6;
     font-size: 0.92rem;
+    color: var(--light-text);
 }
 
 .expertise-container .box:hover {
-    background: var(--text-color);
+    background: var(--main-color);
     color: #fff;
     transform: translateY(-6px);
 }
 
+.expertise-container .box:hover h2,
+.expertise-container .box:hover p {
+    color: #fff;
+}
+
 .expertise-container .box:hover i {
     background: #fff;
-    color: var(--text-color);
+    color: var(--main-color);
 }
 
 
@@ -437,18 +469,19 @@ header.shadow {
 
 .services-container .box {
     text-align: center;
-    border: 2px solid var(--text-color);
+    border: 2px solid var(--border-color);
     padding: 20px;
     border-radius: 0 2rem 0 0;
-    box-shadow: 10px 11px 11px rgb(14 55 54 / 15%);
+    box-shadow: 10px 11px 11px rgba(0, 0, 0, 0.2);
     transition: 0.3s ease;
+    background: var(--card-bg);
 }
 
 .services-container .box .bx {
     padding: 10px;
     color: #fff;
     font-size: 24px;
-    background: var(--text-color);
+    background: var(--main-color);
     border-radius: 4px;
     transition: 0.3s ease;
 }
@@ -456,22 +489,28 @@ header.shadow {
 .services-container .box h2 {
     font-size: 1.1rem;
     margin: 1rem 0 0.5rem;
+    color: var(--text-color);
 }
 
 .services-container .box p {
     line-height: 1.6;
     font-size: 0.92rem;
+    color: var(--light-text);
 }
 
 .services-container .box:hover {
-    background: var(--text-color);
+    background: var(--main-color);
     color: #fff;
-    transition: 0.2s;
+}
+
+.services-container .box:hover h2,
+.services-container .box:hover p {
+    color: #fff;
 }
 
 .services-container .box:hover .bx {
     background: #fff;
-    color: var(--text-color);
+    color: var(--main-color);
 }
 
 
@@ -492,21 +531,21 @@ header.shadow {
     position: relative;
     overflow: hidden;
     border-radius: 1rem;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-    background: #fff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    background: var(--card-bg);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .portfolio-container .box:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
 }
 
 .portfolio-container .box .box-img {
     width: 100%;
     height: 230px;
     overflow: hidden;
-    background-color: #f5f5f5;
+    background-color: #1e293b;
 }
 
 .portfolio-container .box .box-img img {
@@ -521,12 +560,12 @@ header.shadow {
 }
 
 
-/* Portfolio overlay */
+/* PORTFOLIO OVERLAY */
 
 .portfolio-container .box .content {
     position: absolute;
     inset: 0;
-    background: rgba(28, 40, 68, 0.65);
+    background: rgba(17, 24, 39, 0.88);
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -543,8 +582,8 @@ header.shadow {
 
 .portfolio-container .box .content .bx {
     font-size: 26px;
-    background: #fff;
-    color: var(--text-color);
+    background: var(--main-color);
+    color: #fff;
     border-radius: 50%;
     padding: 8px;
     margin-bottom: 8px;
@@ -559,7 +598,7 @@ header.shadow {
 }
 
 
-/* Portfolio links */
+/* PORTFOLIO LINKS */
 
 .links {
     display: flex;
@@ -572,8 +611,8 @@ header.shadow {
     align-items: center;
     gap: 5px;
     padding: 6px 12px;
-    background: #fff;
-    color: var(--text-color);
+    background: #f3f4f6;
+    color: #111827;
     border-radius: 5px;
     font-size: 0.85rem;
     font-weight: 500;
@@ -586,7 +625,7 @@ header.shadow {
 }
 
 
-/* Full-Stack badge */
+/* FULL-STACK BADGE */
 
 .project-type {
     display: inline-block;
@@ -626,18 +665,23 @@ form input,
 form textarea {
     width: 100%;
     padding: 14px;
-    border: none;
+    border: 1px solid var(--border-color);
     outline: none;
-    background: rgb(28, 40, 68, 0.8);
+    background: var(--card-bg);
     margin-bottom: 0.5rem;
-    border-radius: 4px;
-    color: #fff;
+    border-radius: 6px;
+    color: var(--text-color);
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: var(--main-color);
 }
 
 form input::placeholder,
 form textarea::placeholder {
-    color: #fff;
-    opacity: 0.7;
+    color: #94a3b8;
+    opacity: 1;
 }
 
 textarea {
@@ -656,7 +700,7 @@ form .send-btn {
 
 .send-btn {
     display: inline-block;
-    background: var(--text-color);
+    background: var(--main-color);
     padding: 0.8rem 1rem;
     color: #fff;
     font-weight: 500;
@@ -666,16 +710,17 @@ form .send-btn {
 }
 
 .send-btn:hover {
-    background-color: var(--main-color);
+    background-color: var(--accent-hover);
     cursor: pointer;
+    transform: translateY(-2px);
 }
 
 
 /* FOOTER */
 
 .footer {
-    background: var(--text-color);
-    color: #fff;
+    background: #0b1220;
+    color: #f3f4f6;
     margin-top: 70px;
 }
 
@@ -689,27 +734,29 @@ form .send-btn {
 .footer-box h3 {
     margin-bottom: 18px;
     font-size: 1.2rem;
+    color: #f3f4f6;
 }
 
 .footer-box p {
-    color: #dcdcdc;
+    color: #cbd5e1;
     line-height: 1.7;
 }
 
 .footer-box a {
     display: block;
-    color: #dcdcdc;
+    color: #cbd5e1;
     margin-bottom: 12px;
     transition: 0.3s;
 }
 
 .footer-box a:hover {
-    color: #fff;
+    color: var(--main-color);
     padding-left: 6px;
 }
 
 .footer-box i {
     margin-right: 8px;
+    color: var(--main-color);
 }
 
 .footer-bottom {
@@ -717,16 +764,21 @@ form .send-btn {
     border-top: 1px solid rgba(255, 255, 255, 0.15);
     padding: 20px;
     font-size: 0.9rem;
+    color: #94a3b8;
 }
+
 
 /* DARK MODE */
 
 body.dark-mode {
     --body-bg: #111827;
-    --text-color: #e5e7eb;
+    --text-color: #f3f4f6;
+    --light-text: #cbd5e1;
     --light-bg: #1f2937;
     --card-bg: #172033;
+    --border-color: #374151;
 }
+
 
 /* Header */
 
@@ -734,52 +786,78 @@ body.dark-mode header {
     background: #111827;
 }
 
-/* Mobile navigation */
-
 body.dark-mode header .navbar {
     background: #111827;
 }
 
-/* Sections */
 
-body.dark-mode .expertise,
-body.dark-mode .services-container .box {
+/* Mobile navigation */
+
+body.dark-mode .navbar a {
+    color: #f3f4f6;
+}
+
+body.dark-mode .navbar a:hover {
+    background: var(--main-color);
+    color: #fff;
+}
+
+
+/* Titles */
+
+body.dark-mode .about-title h1,
+body.dark-mode .about-title h2,
+body.dark-mode .heading h1,
+body.dark-mode .heading span,
+body.dark-mode .stack-category h2 {
+    color: #f3f4f6;
+}
+
+
+/* Section backgrounds */
+
+body.dark-mode .expertise {
     background: var(--body-bg);
 }
 
-/* Tech cards */
-
-body.dark-mode .tech-box {
-    background: var(--card-bg);
-}
-
-/* Expertise cards */
-
-body.dark-mode .expertise-container .box {
-    background: var(--card-bg);
-}
-
-/* Portfolio */
-
+body.dark-mode .techstack,
 body.dark-mode .portfolio {
     background: var(--light-bg);
 }
 
+
+/* Cards */
+
+body.dark-mode .tech-box,
+body.dark-mode .expertise-container .box,
+body.dark-mode .services-container .box,
 body.dark-mode .portfolio-container .box {
     background: var(--card-bg);
 }
 
-/* Services */
 
-body.dark-mode .services-container .box {
-    background: var(--card-bg);
+/* What I Build icons */
+
+body.dark-mode .expertise-container .box i {
+    background: var(--main-color);
+    color: #fff;
 }
 
-/* Contact labels */
+
+/* Services icons */
+
+body.dark-mode .services-container .box .bx {
+    background: var(--main-color);
+    color: #fff;
+}
+
+
+/* Contact */
 
 body.dark-mode .contact-form label {
     color: var(--text-color);
 }
+
 
 /* Dark mode icon */
 
@@ -799,7 +877,6 @@ body.dark-mode #theme-toggle {
     section {
         padding: 60px 4%;
     }
-
 }
 
 
@@ -822,7 +899,6 @@ body.dark-mode #theme-toggle {
     .home-text p {
         font-size: 0.938rem;
     }
-
 }
 
 
@@ -847,8 +923,8 @@ body.dark-mode #theme-toggle {
         right: 0;
         display: flex;
         flex-direction: column;
-        background: #fff;
-        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+        background: var(--body-bg);
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
         text-align: left;
         opacity: 0;
         visibility: hidden;
@@ -870,7 +946,7 @@ body.dark-mode #theme-toggle {
 
     .navbar a:hover {
         color: #fff;
-        background: var(--text-color);
+        background: var(--main-color);
         border: none;
     }
 
@@ -954,11 +1030,10 @@ body.dark-mode #theme-toggle {
     .portfolio-container {
         grid-template-columns: 1fr;
     }
-
 }
 
 
-/* RESPONSIVE — SMALL MOBILE*/
+/* RESPONSIVE — SMALL MOBILE */
 
 @media (max-width: 618px) {
 
@@ -973,7 +1048,6 @@ body.dark-mode #theme-toggle {
     .portfolio-container .box .box-img {
         height: 210px;
     }
-
 }
 
 
@@ -1016,5 +1090,5 @@ body.dark-mode #theme-toggle {
     .stack-category h2 {
         font-size: 1.1rem;
     }
-
 }
+

@@ -14,14 +14,13 @@
 
 :root {
     --main-color: #4f6df5;
-    --text-color: #e5e7eb;
+    --accent-hover: #6d83ff;
+    --text-color: #f3f4f6;
     --light-text: #cbd5e1;
-    --dark-text: #111827;
     --light-bg: #1f2937;
     --card-bg: #172033;
     --body-bg: #111827;
     --border-color: #374151;
-    --accent-hover: #6d83ff;
 }
 
 section {
@@ -56,7 +55,7 @@ html::-webkit-scrollbar-track {
 
 html::-webkit-scrollbar-thumb {
     background: var(--main-color);
-    border-radius: 5rem;
+    border-radius: 50px;
 }
 
 
@@ -73,11 +72,11 @@ header {
     justify-content: space-between;
     background: var(--body-bg);
     padding: 14px 20px;
-    transition: 0.2s;
+    transition: 0.3s ease;
 }
 
 header.shadow {
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
 
 .logo {
@@ -104,6 +103,7 @@ header.shadow {
 .navbar a:hover {
     background: var(--main-color);
     color: #fff;
+    border-radius: 8px;
 }
 
 #menu-icon {
@@ -198,12 +198,13 @@ header.shadow {
     color: #fff;
     font-weight: 500;
     border-radius: 10px;
-    transition: 0.2s ease;
+    transition: 0.3s ease;
 }
 
 .btn:hover {
     background: var(--accent-hover);
     letter-spacing: 1px;
+    transform: translateY(-2px);
 }
 
 
@@ -274,7 +275,7 @@ header.shadow {
     font-size: 24px;
     color: #fff;
     padding: 10px;
-    border-radius: 4px;
+    border-radius: 8px;
     background: var(--main-color);
     transition: 0.3s ease;
 }
@@ -328,19 +329,19 @@ header.shadow {
     font-weight: 600;
     color: var(--text-color);
     position: relative;
-    padding-bottom: 6px;
+    padding-bottom: 8px;
 }
 
 .stack-category h2::after {
     content: "";
     position: absolute;
-    width: 45px;
+    width: 35px;
     height: 3px;
     background: var(--main-color);
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    border-radius: 10px;
+    border-radius: 50px;
 }
 
 
@@ -354,12 +355,12 @@ header.shadow {
 }
 
 .tech-box {
-    border: 2px solid var(--border-color);
+    border: 1px solid var(--border-color);
     padding: 20px;
-    border-radius: 0 2rem 0 0;
+    border-radius: 18px;
     text-align: center;
-    box-shadow: 10px 11px 11px rgba(0, 0, 0, 0.2);
-    transition: 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+    transition: all 0.3s ease;
     background: var(--card-bg);
     color: var(--text-color);
 }
@@ -382,6 +383,8 @@ header.shadow {
     background: var(--main-color);
     color: #fff;
     transform: translateY(-8px);
+    border-color: var(--main-color);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
 }
 
 .tech-box:hover i,
@@ -409,11 +412,11 @@ header.shadow {
 
 .expertise-container .box {
     text-align: center;
-    border: 2px solid var(--border-color);
+    border: 1px solid var(--border-color);
     padding: 25px 20px;
-    border-radius: 0 2rem 0 0;
-    box-shadow: 10px 11px 11px rgba(0, 0, 0, 0.2);
-    transition: 0.3s ease;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+    transition: all 0.3s ease;
     background: var(--card-bg);
 }
 
@@ -425,7 +428,7 @@ header.shadow {
     color: #fff;
     font-size: 26px;
     background: var(--main-color);
-    border-radius: 6px;
+    border-radius: 10px;
     transition: 0.3s ease;
 }
 
@@ -444,7 +447,9 @@ header.shadow {
 .expertise-container .box:hover {
     background: var(--main-color);
     color: #fff;
-    transform: translateY(-6px);
+    transform: translateY(-8px);
+    border-color: var(--main-color);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
 }
 
 .expertise-container .box:hover h2,
@@ -469,11 +474,11 @@ header.shadow {
 
 .services-container .box {
     text-align: center;
-    border: 2px solid var(--border-color);
+    border: 1px solid var(--border-color);
     padding: 20px;
-    border-radius: 0 2rem 0 0;
-    box-shadow: 10px 11px 11px rgba(0, 0, 0, 0.2);
-    transition: 0.3s ease;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+    transition: all 0.3s ease;
     background: var(--card-bg);
 }
 
@@ -482,7 +487,7 @@ header.shadow {
     color: #fff;
     font-size: 24px;
     background: var(--main-color);
-    border-radius: 4px;
+    border-radius: 10px;
     transition: 0.3s ease;
 }
 
@@ -501,6 +506,9 @@ header.shadow {
 .services-container .box:hover {
     background: var(--main-color);
     color: #fff;
+    transform: translateY(-8px);
+    border-color: var(--main-color);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
 }
 
 .services-container .box:hover h2,
@@ -530,15 +538,15 @@ header.shadow {
 .portfolio-container .box {
     position: relative;
     overflow: hidden;
-    border-radius: 1rem;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
     background: var(--card-bg);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .portfolio-container .box:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
 }
 
 .portfolio-container .box .box-img {
@@ -613,7 +621,7 @@ header.shadow {
     padding: 6px 12px;
     background: #f3f4f6;
     color: #111827;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 0.85rem;
     font-weight: 500;
     transition: 0.3s;
@@ -631,7 +639,7 @@ header.shadow {
     display: inline-block;
     margin-bottom: 10px;
     padding: 5px 12px;
-    border-radius: 20px;
+    border-radius: 50px;
     background: var(--main-color);
     color: #fff;
     font-size: 0.75rem;
@@ -669,13 +677,15 @@ form textarea {
     outline: none;
     background: var(--card-bg);
     margin-bottom: 0.5rem;
-    border-radius: 6px;
+    border-radius: 10px;
     color: var(--text-color);
+    transition: 0.3s ease;
 }
 
 form input:focus,
 form textarea:focus {
     border-color: var(--main-color);
+    box-shadow: 0 0 0 3px rgba(79, 109, 245, 0.15);
 }
 
 form input::placeholder,
@@ -706,7 +716,7 @@ form .send-btn {
     font-weight: 500;
     border-radius: 10px;
     border: none;
-    transition: 0.2s ease;
+    transition: 0.3s ease;
 }
 
 .send-btn:hover {
@@ -779,19 +789,9 @@ body.dark-mode {
     --border-color: #374151;
 }
 
-
-/* Header */
-
 body.dark-mode header {
     background: #111827;
 }
-
-body.dark-mode header .navbar {
-    background: #111827;
-}
-
-
-/* Mobile navigation */
 
 body.dark-mode .navbar a {
     color: #f3f4f6;
@@ -802,31 +802,14 @@ body.dark-mode .navbar a:hover {
     color: #fff;
 }
 
-
-/* Titles */
-
-body.dark-mode .about-title h1,
-body.dark-mode .about-title h2,
-body.dark-mode .heading h1,
-body.dark-mode .heading span,
-body.dark-mode .stack-category h2 {
-    color: #f3f4f6;
-}
-
-
-/* Section backgrounds */
-
-body.dark-mode .expertise {
-    background: var(--body-bg);
-}
-
 body.dark-mode .techstack,
 body.dark-mode .portfolio {
     background: var(--light-bg);
 }
 
-
-/* Cards */
+body.dark-mode .expertise {
+    background: var(--body-bg);
+}
 
 body.dark-mode .tech-box,
 body.dark-mode .expertise-container .box,
@@ -834,32 +817,6 @@ body.dark-mode .services-container .box,
 body.dark-mode .portfolio-container .box {
     background: var(--card-bg);
 }
-
-
-/* What I Build icons */
-
-body.dark-mode .expertise-container .box i {
-    background: var(--main-color);
-    color: #fff;
-}
-
-
-/* Services icons */
-
-body.dark-mode .services-container .box .bx {
-    background: var(--main-color);
-    color: #fff;
-}
-
-
-/* Contact */
-
-body.dark-mode .contact-form label {
-    color: var(--text-color);
-}
-
-
-/* Dark mode icon */
 
 body.dark-mode #theme-toggle {
     color: #facc15;
@@ -951,7 +908,7 @@ body.dark-mode #theme-toggle {
     }
 
 
-    /* Home */
+    /* HOME */
 
     .home {
         grid-template-columns: 1fr;
@@ -996,7 +953,7 @@ body.dark-mode #theme-toggle {
     }
 
 
-    /* Tech Stack */
+    /* TECH STACK */
 
     .tech-container {
         grid-template-columns: repeat(2, 1fr);
@@ -1004,6 +961,7 @@ body.dark-mode #theme-toggle {
 
     .tech-box {
         padding: 15px;
+        border-radius: 16px;
     }
 
     .tech-box i {
@@ -1011,24 +969,36 @@ body.dark-mode #theme-toggle {
     }
 
 
-    /* Expertise */
+    /* WHAT I BUILD */
 
     .expertise-container {
         grid-template-columns: 1fr;
     }
 
+    .expertise-container .box {
+        border-radius: 16px;
+    }
 
-    /* Services */
+
+    /* SERVICES */
 
     .services-container {
         grid-template-columns: 1fr;
     }
 
+    .services-container .box {
+        border-radius: 16px;
+    }
 
-    /* Portfolio */
+
+    /* PORTFOLIO */
 
     .portfolio-container {
         grid-template-columns: 1fr;
+    }
+
+    .portfolio-container .box {
+        border-radius: 16px;
     }
 }
 
@@ -1090,5 +1060,12 @@ body.dark-mode #theme-toggle {
     .stack-category h2 {
         font-size: 1.1rem;
     }
+
+    .tech-box,
+    .expertise-container .box,
+    .services-container .box {
+        border-radius: 14px;
+    }
 }
+
 

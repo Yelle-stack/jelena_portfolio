@@ -118,15 +118,24 @@ header.shadow {
 /* DARK MODE TOGGLE */
 
 #theme-toggle {
+    border: none;
+    background: transparent;
+    padding: 6px;
+    margin-left: 15px;
     font-size: 24px;
     cursor: pointer;
     color: var(--text-color);
     transition: 0.3s ease;
-    margin-left: auto;
-    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     z-index: 1004;
-    flex-shrink: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#theme-toggle i {
+    pointer-events: none;
 }
 
 #theme-toggle:hover {
@@ -799,6 +808,9 @@ body.dark-mode header {
     background: #111827;
 }
 
+body.dark-mode #theme-toggle {
+    color: #facc15;
+}
 body.dark-mode .navbar a {
     color: #f3f4f6;
 }
@@ -822,10 +834,6 @@ body.dark-mode .expertise-container .box,
 body.dark-mode .services-container .box,
 body.dark-mode .portfolio-container .box {
     background: var(--card-bg);
-}
-
-body.dark-mode #theme-toggle {
-    color: #facc15;
 }
 
 

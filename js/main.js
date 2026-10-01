@@ -20,27 +20,28 @@ if (themeToggle) {
         document.body.classList.toggle("dark-mode", isDark);
 
         if (themeIcon) {
-            themeIcon.classList.toggle("bx-sun", isDark);
-            themeIcon.classList.toggle("bx-moon", !isDark);
+            themeIcon.classList.remove("bx-sun", "bx-moon");
+            themeIcon.classList.add(isDark ? "bx-sun" : "bx-moon");
         }
 
         localStorage.setItem("theme", isDark ? "dark" : "light");
     }
 
-    // Default theme = dark
+    // Default = dark mode
     const savedTheme = localStorage.getItem("theme");
 
-    const isDarkMode = savedTheme !== "light";
+    if (savedTheme === "light") {
+        updateTheme(false);
+    } else {
+        updateTheme(true);
+    }
 
-    updateTheme(isDarkMode);
-
-    // Toggle theme
     themeToggle.addEventListener("click", () => {
 
-        const darkMode =
+        const isDark =
             !document.body.classList.contains("dark-mode");
 
-        updateTheme(darkMode);
+        updateTheme(isDark);
     });
 }
 

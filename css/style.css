@@ -15,12 +15,14 @@
 :root {
     --main-color: #4f6df5;
     --accent-hover: #6d83ff;
-    --text-color: #f3f4f6;
-    --light-text: #cbd5e1;
-    --light-bg: #1f2937;
-    --card-bg: #172033;
-    --body-bg: #111827;
-    --border-color: #374151;
+
+    /* Light mode */
+    --text-color: #1f2937;
+    --light-text: #64748b;
+    --light-bg: #f8fafc;
+    --card-bg: #ffffff;
+    --body-bg: #ffffff;
+    --border-color: #e2e8f0;
 }
 
 section {

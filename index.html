@@ -7,56 +7,48 @@
     <meta name="description" content="Jelena, Full-Stack Developer based in France, specializing in the MERN Stack: MongoDB, Express, React and Node.js.">
     <meta property="og:title" content="Jelena - Full-Stack Developer Portfolio">
     <meta property="og:description" content="Full-Stack Developer specializing in the MERN Stack, building modern, responsive and scalable web applications.">
-   <meta property="og:image" content="https://jelena-portfolio.vercel.app/images/logo.png">
+    <meta property="og:image" content="https://jelena-portfolio.vercel.app/images/logo.png">
     <meta property="og:url" content="https://jelena-portfolio.vercel.app/">
-
     <meta property="og:type" content="website">
     <meta name="author" content="Jelena">
 
     <title>Jelena | Full-Stack Developer • MERN Stack</title>
     <link rel="canonical" href="https://jelena-portfolio.vercel.app/">
 
-    <!-- Link to CSS -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@2.16.0/devicon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
+
+    <!-- Main CSS -->
     <link rel="stylesheet" href="css/style.css" />
-
-    <!-- Box Icons -->
-     <!-- Devicon Tech Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
-    />
     <link rel="icon" type="image/png" href="./images/logo.png" />
-
-    <!-- Web3Forms Success Script -->
-    <script src="https://web3forms.com/client/script.js" async defer></script>
 </head>
 
 <body>
-   <!-- Header -->
-<header>
-    <a href="#" class="logo">Jelena</a>
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo">Jelena</a>
 
-    <ul class="navbar">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#techstack">Tech Stack</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#techstack">Tech Stack</a></li>
+            <li><a href="#services">What I Do</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
 
-<button
-    type="button"
-    id="theme-toggle"
-    aria-label="Switch to light mode"
-    title="Switch theme"
->
-    <i class="bx bx-sun" aria-hidden="true"></i>
-</button>
+        <button type="button" id="theme-toggle" aria-label="Switch to light mode" title="Switch theme">
+            <i class="bx bx-sun" aria-hidden="true"></i>
+        </button>
 
-    <div class="bx bx-menu" id="menu-icon"></div>
-</header>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
 
     <!-- Home -->
     <section class="home" id="home">
@@ -70,17 +62,16 @@
             <a href="#contact" class="btn">Let's work together</a>
         </div>
         <div class="home-img">
-            <img src="images/profilpicture.png" alt="Photo_de_Jelena" />
+            <img src="images/profilpicture.png" alt="Portrait of Jelena, Full-Stack Developer" />
         </div>
     </section>
 
     <!-- About -->
     <section class="about" id="about">
         <div class="about-title">
-            <h1><span>About </span></h1>
-            <h2></h2>
+            <h1><span>About</span></h1>
             <div class="about-img">
-                <img src="images/image-2.png" alt="about_photo" />
+                <img src="images/image-2.png" alt="Jelena, Full-Stack Developer" loading="lazy" />
             </div>
         </div>
         <div class="about-text">
@@ -88,514 +79,327 @@
                 Passionate about web development, I build modern, high-performing, and user-centered web applications with a strong focus on responsive design and seamless user experiences.
             </p>
             <p>
-               Professionally trained in Front-End Development, I have expanded my skills into back-end development and now build full-stack applications using the MERN Stack: MongoDB, Express, React, and Node.js.
+                Professionally trained in Front-End Development, I have expanded my skills into back-end development and now build full-stack applications using the MERN Stack: MongoDB, Express, React, and Node.js.
             </p>
             <p>
-               I enjoy working across the entire development process — from designing responsive interfaces and building reusable React components to developing REST APIs, managing databases, and connecting front-end applications to the back end. I’m always looking to create clean, scalable, and intuitive web experiences.
-
+                I enjoy working across the entire development process — from designing responsive interfaces and building reusable React components to developing REST APIs, managing databases, and connecting front-end applications to the back end. I'm always looking to create clean, scalable, and intuitive web experiences.
             </p>
             <div class="social">
-                <a href="https://github.com/Yelle-stack"><i class="bx bxl-github"></i></a>
-
+                <a href="https://github.com/Yelle-stack" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="bx bxl-github"></i>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Tech Stack -->
-<section class="techstack" id="techstack">
+    <section class="techstack" id="techstack">
 
-    <div class="heading">
-        <h1><span>Tech Stack</span></h1>
-    </div>
-
-    <!-- Frontend -->
-    <div class="stack-category">
-        <h2>Frontend</h2>
-    </div>
-
-    <div class="tech-container">
-
-        <div class="tech-box">
-            <i class="devicon-html5-plain colored"></i>
-            <h3>HTML5</h3>
+        <div class="heading">
+            <h1><span>Tech Stack</span></h1>
         </div>
-
-        <div class="tech-box">
-            <i class="devicon-css3-plain colored"></i>
-            <h3>CSS3</h3>
-        </div>
-
-        <div class="tech-box">
-            <i class="devicon-javascript-plain colored"></i>
-            <h3>JavaScript</h3>
-        </div>
-
-        <div class="tech-box">
-            <i class="devicon-typescript-plain colored"></i>
-            <h3>TypeScript</h3>
-        </div>
-
-        <div class="tech-box">
-            <i class="devicon-react-original colored"></i>
-            <h3>React</h3>
-        </div>
-
-        <div class="tech-box">
-            <i class="devicon-nextjs-plain"></i>
-            <h3>Next.js</h3>
-        </div>
-
-        <div class="tech-box">
-            <i class="devicon-tailwindcss-original colored"></i>
-            <h3>Tailwind CSS</h3>
-        </div>
-
-    </div>
-
-    <!-- Backend -->
-    <div class="stack-category">
-        <h2>Backend</h2>
-    </div>
-
-    <div class="tech-container">
-
-        <div class="tech-box">
-            <i class="devicon-nodejs-plain colored"></i>
-            <h3>Node.js</h3>
-        </div>
-
-        <div class="tech-box">
-            <i class="devicon-express-original"></i>
-            <h3>Express.js</h3>
-        </div>
-
-        <div class="tech-box">
-            <i class="devicon-mongodb-plain colored"></i>
-            <h3>MongoDB</h3>
-        </div>
-
-        <div class="tech-box">
-            <i class="bx bx-server"></i>
-            <h3>REST APIs</h3>
-        </div>
-
-    </div>
-
-    <!-- Tools -->
-    <div class="stack-category">
-        <h2>Tools</h2>
-    </div>
-
-    <div class="tech-container">
-
-        <div class="tech-box">
-            <i class="devicon-git-plain colored"></i>
-            <h3>Git</h3>
-        </div>
-
-        <div class="tech-box">
-            <i class="devicon-github-original"></i>
-            <h3>GitHub</h3>
-        </div>
-
-        <div class="tech-box">
-            <i class="devicon-npm-original-wordmark colored"></i>
-            <h3>npm</h3>
-        </div>
-
-        <div class="tech-box">
-            <i class="devicon-figma-plain colored"></i>
-            <h3>Figma</h3>
-        </div>
-
-    </div>
-
-</section>
-    <!-- What I Build -->
-    <section class="expertise" id="expertise">
-
-    <div class="heading">
-        <h1><span>What I Build</span></h1>
-    </div>
-
-    <div class="expertise-container">
-
-        <div class="box">
-            <i class="bx bx-devices"></i>
-            <h2>Web Applications</h2>
-            <p>
-                I build modern, responsive and interactive web applications
-                using React, JavaScript, TypeScript and Tailwind CSS.
-            </p>
-        </div>
-
-        <div class="box">
-            <i class="bx bx-server"></i>
-            <h2>REST APIs</h2>
-            <p>
-                I develop backend APIs with Node.js and Express.js to connect
-                applications, services and databases.
-            </p>
-        </div>
-
-        <div class="box">
-            <i class="bx bx-code-block"></i>
-            <h2>Full-Stack Applications</h2>
-            <p>
-                I build complete web applications by connecting React
-                frontends with Node.js, Express.js and MongoDB.
-            </p>
-        </div>
-
-        <div class="box">
-            <i class="bx bx-layer"></i>
-            <h2>Interactive Experiences</h2>
-            <p>
-                I create intuitive and engaging user experiences with
-                reusable components, smooth interactions and responsive layouts.
-            </p>
-        </div>
-
-    </div>
-
-</section>              
-
-    <!-- Services -->
-<section class="services" id="services">
-
-    <div class="heading">
-        <h1><span>Services</span></h1>
-    </div>
-
-    <div class="services-container">
 
         <!-- Frontend -->
-        <div class="box">
-            <i class="bx bx-code-alt"></i>
-            <h2>Frontend Development</h2>
-            <p>
-                I build modern, responsive and interactive user interfaces
-                using React, JavaScript, TypeScript and Tailwind CSS.
-            </p>
+        <div class="stack-category">
+            <h2>Frontend</h2>
+        </div>
+
+        <div class="tech-container">
+            <div class="tech-box">
+                <i class="devicon-html5-plain colored"></i>
+                <h3>HTML5</h3>
+            </div>
+            <div class="tech-box">
+                <i class="devicon-css3-plain colored"></i>
+                <h3>CSS3</h3>
+            </div>
+            <div class="tech-box">
+                <i class="devicon-javascript-plain colored"></i>
+                <h3>JavaScript</h3>
+            </div>
+            <div class="tech-box">
+                <i class="devicon-typescript-plain colored"></i>
+                <h3>TypeScript</h3>
+            </div>
+            <div class="tech-box">
+                <i class="devicon-react-original colored"></i>
+                <h3>React</h3>
+            </div>
+            <div class="tech-box">
+                <i class="devicon-nextjs-plain"></i>
+                <h3>Next.js</h3>
+            </div>
+            <div class="tech-box">
+                <i class="devicon-tailwindcss-original colored"></i>
+                <h3>Tailwind CSS</h3>
+            </div>
         </div>
 
         <!-- Backend -->
-        <div class="box">
-            <i class="bx bx-server"></i>
-            <h2>Backend Development</h2>
-            <p>
-                I develop server-side applications and REST APIs using
-                Node.js and Express.js.
-            </p>
+        <div class="stack-category">
+            <h2>Backend</h2>
         </div>
 
-        <!-- Full Stack -->
-        <div class="box">
-            <i class="bx bx-layer"></i>
-            <h2>Full-Stack Development</h2>
-            <p>
-                I build complete web applications using the MERN Stack:
-                MongoDB, Express.js, React and Node.js.
-            </p>
+        <div class="tech-container">
+            <div class="tech-box">
+                <i class="devicon-nodejs-plain colored"></i>
+                <h3>Node.js</h3>
+            </div>
+            <div class="tech-box">
+                <i class="devicon-express-original"></i>
+                <h3>Express.js</h3>
+            </div>
+            <div class="tech-box">
+                <i class="devicon-mongodb-plain colored"></i>
+                <h3>MongoDB</h3>
+            </div>
+            <div class="tech-box">
+                <i class="bx bx-server"></i>
+                <h3>REST APIs</h3>
+            </div>
         </div>
 
-        <!-- UI Integration -->
-        <div class="box">
-            <i class="bx bxl-figma"></i>
-            <h2>UI Integration</h2>
-            <p>
-                I transform Figma designs into responsive, accessible and
-                user-friendly web interfaces.
-            </p>
+        <!-- Tools -->
+        <div class="stack-category">
+            <h2>Tools</h2>
         </div>
 
-        <!-- Responsive Design -->
-        <div class="box">
-            <i class="bx bx-devices"></i>
-            <h2>Responsive Web Design</h2>
-            <p>
-                I create web experiences that adapt seamlessly to desktops,
-                tablets and mobile devices.
-            </p>
+        <div class="tech-container">
+            <div class="tech-box">
+                <i class="devicon-git-plain colored"></i>
+                <h3>Git</h3>
+            </div>
+            <div class="tech-box">
+                <i class="devicon-github-original"></i>
+                <h3>GitHub</h3>
+            </div>
+            <div class="tech-box">
+                <i class="devicon-npm-original-wordmark colored"></i>
+                <h3>npm</h3>
+            </div>
+            <div class="tech-box">
+                <i class="devicon-figma-plain colored"></i>
+                <h3>Figma</h3>
+            </div>
         </div>
 
-    </div>
+    </section>
 
-</section>
-    
-   <!-- Portfolio -->
-<section class="portfolio" id="portfolio">
+    <!-- What I Do (ancien "What I Build" + "Services" fusionnés) -->
+    <section class="services" id="services">
 
-    <div class="heading">
-        <h1><span>Portfolio</span></h1>
-    </div>
+        <div class="heading">
+            <h1><span>What I Do</span></h1>
+        </div>
 
-    <div class="portfolio-container">
+        <div class="services-container">
 
-        <!-- DeepSeek Clone -->
-       
-        <div class="portfolio-box">
-
-            <img
-                src="images/deepseek.png"
-                alt="DeepSeek AI chat application"
-            >
-
-            <div class="portfolio-content">
-
-                <h2>DeepSeek Clone</h2>
-
+            <div class="box">
+                <i class="bx bx-code-alt"></i>
+                <h2>Frontend Development</h2>
                 <p>
-                    An AI-powered chat application built with Next.js,
-                    featuring authentication and an interactive chat interface.
+                    Responsive, accessible interfaces built with React, TypeScript
+                    and Tailwind CSS, from reusable components to smooth interactions.
                 </p>
+            </div>
 
-                <span>
-                    Next.js • React • Tailwind CSS • Clerk • DeepSeek API
-                </span>
+            <div class="box">
+                <i class="bx bx-server"></i>
+                <h2>Backend &amp; REST APIs</h2>
+                <p>
+                    Server-side applications and REST APIs with Node.js and
+                    Express, connected to MongoDB databases.
+                </p>
+            </div>
 
-                <div class="portfolio-links">
+            <div class="box">
+                <i class="bx bx-layer"></i>
+                <h2>Full-Stack Applications</h2>
+                <p>
+                    End-to-end web apps on the MERN stack: from database and API
+                    to the interface users interact with.
+                </p>
+            </div>
 
-                    <a
-                        href="https://github.com/Yelle-stack/deepseek"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        GitHub
-                    </a>
-
-                </div>
-
+            <div class="box">
+                <i class="bx bxl-figma"></i>
+                <h2>Design to Code</h2>
+                <p>
+                    I turn Figma designs into pixel-accurate, responsive
+                    interfaces that work on desktop, tablet and mobile.
+                </p>
             </div>
 
         </div>
 
-        <!-- TableUp -->
-       
-        <div class="portfolio-box">
+    </section>
 
-            <img
-                src="images/tableup.png"
-                alt="TableUp restaurant application"
-            >
+    <!-- Portfolio -->
+    <section class="portfolio" id="portfolio">
 
-            <div class="portfolio-content">
+        <div class="heading">
+            <h1><span>Portfolio</span></h1>
+        </div>
 
-                <h2>TableUp</h2>
+        <div class="portfolio-container">
 
-                <p>
-                    A full-stack restaurant application connecting a React
-                    frontend with a Node.js and Express backend.
-                </p>
-
-                <span>
-                    React • Node.js • Express • MongoDB • Tailwind CSS
-                </span>
-
-                <div class="portfolio-links">
-
-                    <a
-                        href="https://github.com/Yelle-stack/TableUp"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        GitHub
-                    </a>
-
+            <!-- DeepSeek Clone -->
+            <div class="portfolio-box">
+                <img src="images/deepseek.png" alt="Preview of the DeepSeek Clone chat application" loading="lazy">
+                <div class="portfolio-content">
+                    <h2>DeepSeek Clone</h2>
+                    <p>
+                        An AI chat application built with Next.js, featuring user
+                        authentication with Clerk and an interactive chat interface
+                        connected to the DeepSeek API.
+                    </p>
+                    <ul class="tech-tags">
+                        <li>Next.js</li>
+                        <li>React</li>
+                        <li>Tailwind CSS</li>
+                        <li>Clerk</li>
+                        <li>DeepSeek API</li>
+                    </ul>
+                    <div class="portfolio-links">
+                        <a class="btn-project" href="https://github.com/Yelle-stack/deepseek" target="_blank" rel="noopener noreferrer">
+                            <i class="bx bxl-github"></i> GitHub
+                        </a>
+                    </div>
                 </div>
+            </div>
 
+            <!-- TableUp -->
+            <div class="portfolio-box">
+                <img src="images/tableup.png" alt="Preview of the TableUp restaurant application" loading="lazy">
+                <div class="portfolio-content">
+                    <h2>TableUp</h2>
+                    <p>
+                        A full-stack restaurant application: a React front end
+                        connected to a Node.js and Express REST API with a
+                        MongoDB database.
+                    </p>
+                    <ul class="tech-tags">
+                        <li>React</li>
+                        <li>Node.js</li>
+                        <li>Express</li>
+                        <li>MongoDB</li>
+                        <li>Tailwind CSS</li>
+                    </ul>
+                    <div class="portfolio-links">
+                        <a class="btn-project" href="https://github.com/Yelle-stack/TableUp" target="_blank" rel="noopener noreferrer">
+                            <i class="bx bxl-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Restro -->
+            <div class="portfolio-box">
+                <img src="images/portfolio6.png" alt="Preview of the Restro restaurant website" loading="lazy">
+                <div class="portfolio-content">
+                    <h2>Restro</h2>
+                    <p>
+                        A modern restaurant website focused on elegant design,
+                        responsive layouts and smooth user interactions.
+                    </p>
+                    <ul class="tech-tags">
+                        <li>React</li>
+                        <li>Vite</li>
+                        <li>Tailwind CSS</li>
+                    </ul>
+                    <div class="portfolio-links">
+                        <a class="btn-project" href="https://restro-sandy-three.vercel.app/" target="_blank" rel="noopener noreferrer">
+                            Live Demo <i class="bx bx-link-external"></i>
+                        </a>
+                        <a class="btn-project secondary" href="https://github.com/Yelle-stack/restro" target="_blank" rel="noopener noreferrer">
+                            <i class="bx bxl-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Learning Management System -->
+            <div class="portfolio-box">
+                <img src="images/portfolio4.png" alt="Preview of the Learning Management System" loading="lazy">
+                <div class="portfolio-content">
+                    <h2>Learning Management System</h2>
+                    <p>
+                        A modern learning platform with Clerk authentication,
+                        responsive interfaces and a clearly organized user experience.
+                    </p>
+                    <ul class="tech-tags">
+                        <li>React</li>
+                        <li>Vite</li>
+                        <li>Tailwind CSS</li>
+                        <li>Clerk</li>
+                    </ul>
+                    <div class="portfolio-links">
+                        <a class="btn-project" href="https://lms-sooty-two-58.vercel.app/" target="_blank" rel="noopener noreferrer">
+                            Live Demo <i class="bx bx-link-external"></i>
+                        </a>
+                        <a class="btn-project secondary" href="https://github.com/Yelle-stack/lms-client" target="_blank" rel="noopener noreferrer">
+                            <i class="bx bxl-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Umami -->
+            <div class="portfolio-box">
+                <img src="images/portfolio5.png" alt="Preview of the Umami restaurant application" loading="lazy">
+                <div class="portfolio-content">
+                    <h2>Umami Restaurant</h2>
+                    <p>
+                        A restaurant application with a responsive interface and
+                        reusable React components, using the Context API for
+                        state management.
+                    </p>
+                    <ul class="tech-tags">
+                        <li>React</li>
+                        <li>JavaScript</li>
+                        <li>Tailwind CSS</li>
+                        <li>Context API</li>
+                    </ul>
+                    <div class="portfolio-links">
+                        <a class="btn-project" href="https://frontend-six-jade-8t3g35n642.vercel.app/" target="_blank" rel="noopener noreferrer">
+                            Live Demo <i class="bx bx-link-external"></i>
+                        </a>
+                        <a class="btn-project secondary" href="https://github.com/Yelle-stack/-UMAMI-HOUSE-Frontend" target="_blank" rel="noopener noreferrer">
+                            <i class="bx bxl-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hotel Booking -->
+            <div class="portfolio-box">
+                <img src="images/portfolio.png" alt="Preview of the Hotel Booking application" loading="lazy">
+                <div class="portfolio-content">
+                    <h2>Hotel Booking</h2>
+                    <p>
+                        A responsive hotel booking application with a modern
+                        interface and user authentication.
+                    </p>
+                    <ul class="tech-tags">
+                        <li>React</li>
+                        <li>Tailwind CSS</li>
+                        <li>Clerk</li>
+                    </ul>
+                    <div class="portfolio-links">
+                        <a class="btn-project" href="https://hotel-booking-jet-seven.vercel.app/" target="_blank" rel="noopener noreferrer">
+                            Live Demo <i class="bx bx-link-external"></i>
+                        </a>
+                        <a class="btn-project secondary" href="https://github.com/Yelle-stack/HotelBookingFrontEnd" target="_blank" rel="noopener noreferrer">
+                            <i class="bx bxl-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
             </div>
 
         </div>
 
-        <!-- Restro -->
-        
-        <div class="portfolio-box">
+    </section>
 
-            <img
-                src="images/portfolio6.png"
-                alt="Restro restaurant website"
-            >
-
-            <div class="portfolio-content">
-
-                <h2>Restro</h2>
-
-                <p>
-                    A modern restaurant website focused on elegant design,
-                    responsive layouts and smooth user interactions.
-                </p>
-
-                <span>
-                    React • Vite • Tailwind CSS
-                </span>
-
-                <div class="portfolio-links">
-
-                    <a
-                        href="https://github.com/Yelle-stack/restro"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        GitHub
-                    </a>
-
-                    <a
-                        href="https://restro-sandy-three.vercel.app/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Live Demo
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- Learning Management System -->
-       
-        <div class="portfolio-box">
-
-            <img
-                src="images/portfolio4.png"
-                alt="Learning Management System"
-            >
-
-            <div class="portfolio-content">
-
-                <h2>Learning Management System</h2>
-
-                <p>
-                    A modern learning platform with authentication,
-                    responsive interfaces and an organized user experience.
-                </p>
-
-                <span>
-                    React • Vite • Tailwind CSS • Clerk
-                </span>
-
-                <div class="portfolio-links">
-
-                    <a
-                        href="https://github.com/Yelle-stack/lms-client"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        GitHub
-                    </a>
-
-                    <a
-                        href="https://lms-sooty-two-58.vercel.app/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Live Demo
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- Umami -->
-    
-        <div class="portfolio-box">
-
-            <img
-                src="images/portfolio5.png"
-                alt="Umami restaurant application"
-            >
-
-            <div class="portfolio-content">
-
-                <h2>Umami Restaurant</h2>
-
-                <p>
-                    A modern restaurant application with a responsive
-                    interface and reusable React components.
-                </p>
-
-                <span>
-                    React • JavaScript • Tailwind CSS • Context API
-                </span>
-
-                <div class="portfolio-links">
-
-                    <a
-                        href="https://github.com/Yelle-stack/-UMAMI-HOUSE-Frontend"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        GitHub
-                    </a>
-
-                    <a
-                        href="https://frontend-six-jade-8t3g35n642.vercel.app/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Live Demo
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- Hotel Booking -->
-    
-        <div class="portfolio-box">
-
-            <img
-                src="images/portfolio.png"
-                alt="Hotel booking application"
-            >
-
-            <div class="portfolio-content">
-
-                <h2>Hotel Booking</h2>
-
-                <p>
-                    A responsive hotel booking application with modern
-                    user interfaces and authentication.
-                </p>
-
-                <span>
-                    React • Tailwind CSS • Clerk
-                </span>
-
-                <div class="portfolio-links">
-
-                    <a
-                        href="https://github.com/Yelle-stack/HotelBookingFrontEnd"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        GitHub
-                    </a>
-
-                    <a
-                        href="https://hotel-booking-jet-seven.vercel.app/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Live Demo
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-    
     <!-- Contact -->
     <section class="contact" id="contact">
 
@@ -605,126 +409,83 @@
 
         <div class="contact-form">
 
-            <form action="https://api.web3forms.com/submit" method="POST">
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
 
                 <!-- Web3Forms Access Key -->
-                <input 
-                type="hidden" 
-                name="access_key" value="42b09f65-8006-431d-8fd2-e3d17cdb50ed" 
-                />
+                <input type="hidden" name="access_key" value="42b09f65-8006-431d-8fd2-e3d17cdb50ed" />
 
-                <input 
-                type="text" 
-                name="botcheck" 
-                style="display:none;"
-                />   
+                <!-- Honeypot anti-spam -->
+                <input type="checkbox" name="botcheck" class="hidden-field" tabindex="-1" autocomplete="off" />
 
-                <!-- Name -->
-            <label for="name">Name</label>
+                <label for="name">Name</label>
+                <input id="name" type="text" name="name" placeholder="Name" required />
 
-            <input id="name" 
-            type="text" 
-            name="name" 
-            placeholder="Name" 
-            required 
-            />
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" placeholder="Email" required />
 
-              <!-- Email -->
-            <label for="email">Email</label>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" placeholder="Message..." required></textarea>
 
-            <input 
-            id="email" 
-            type="email" 
-            name="email" 
-            placeholder="Email" 
-            required 
-            />
-             
-            <!-- Message -->
-            <label for="message">Message</label>
+                <button type="submit" class="send-btn">Send</button>
 
-            <textarea 
-            id="message" 
-            name="message" 
-            rows="6" 
-            placeholder="Message..." 
-            required
-            ></textarea>
-
-                <!-- Submit -->
-                <button type="submit" class="send-btn">
-                    Send
-                </button>
+                <p id="form-status" role="status" aria-live="polite"></p>
 
             </form>
         </div>
     </section>
 
-   <!-- Footer -->
-<footer class="footer">
+    <!-- Footer -->
+    <footer class="footer">
 
-    <div class="footer-container">
+        <div class="footer-container">
 
-         <!-- About -->
-        <div class="footer-box">
+            <div class="footer-box">
+                <h3>Jelena</h3>
+                <p>
+                    Full-Stack Developer specializing in the MERN Stack, building modern, responsive and scalable web applications.
+                </p>
+            </div>
 
-            <h3>Jelena</h3>
-            <p>
-                Full-Stack Developer specializing in the MERN Stack, building modern, responsive and scalable web applications.
-            </p>
+            <div class="footer-box">
+                <h3>Navigation</h3>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#techstack">Tech Stack</a>
+                <a href="#services">What I Do</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="footer-box">
+                <h3>Contact</h3>
+
+                <a href="https://github.com/Yelle-stack" target="_blank" rel="noopener noreferrer">
+                    <i class="bx bxl-github"></i> GitHub
+                </a>
+
+                <a href="https://facebook.com/yelena.zeko" target="_blank" rel="noopener noreferrer">
+                    <i class="bx bxl-facebook"></i> Facebook
+                </a>
+
+                <a href="mailto:creation.siteweb@yahoo.com">
+                    <i class="bx bx-envelope"></i>
+                    creation.siteweb@yahoo.com
+                </a>
+            </div>
+
         </div>
 
-           <!-- Navigation -->
-        <div class="footer-box">
-
-            <h3>Navigation</h3>
-
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#techstack">Tech Stack</a>
-            <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
+        <div class="footer-bottom">
+            © <span id="year"></span>
+            Jelena — All rights reserved.
         </div>
 
-           <!-- Contact -->
-        <div class="footer-box">
-
-            <h3>Contact</h3>
-
-            <a href="https://github.com/Yelle-stack"
-               target="_blank"
-               rel="noopener noreferrer">
-
-                <i class="bx bxl-github"></i> GitHub
-            </a>
-
-            <a href="https://facebook.com/yelena.zeko"
-               target="_blank"
-               rel="noopener noreferrer">
-                <i class="bx bxl-facebook"></i> Facebook
-            </a>
-
-            <a href="mailto:creation.siteweb@yahoo.com">
-                <i class="bx bx-envelope"></i>
-                creation.siteweb@yahoo.com
-            </a>
-        </div>
-
-    </div>
-
-      <!-- Copyright -->
-    <div class="footer-bottom">
-        © <span id="year"></span>
-        Jelena — All rights reserved.
-    </div>
-
-</footer>
+    </footer>
 
     <!-- Scroll Reveal -->
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js" defer></script>
 
     <!-- Custom JS -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>

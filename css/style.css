@@ -1,13 +1,8 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-
 /* GLOBAL */
 
 * {
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
-    scroll-padding-top: 2rem;
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
@@ -111,9 +106,7 @@ header {
     background: var(--body-bg);
     padding: 14px 20px;
 
-    transition:
-        background 0.3s ease,
-        box-shadow 0.3s ease;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 header.shadow {
@@ -144,9 +137,7 @@ header.shadow {
     color: var(--text-color);
     font-weight: 500;
     border-radius: 9px;
-    transition:
-        background 0.25s ease,
-        color 0.25s ease;
+    transition: background 0.25s ease, color 0.25s ease;
 }
 
 .navbar a:hover {
@@ -163,7 +154,7 @@ header.shadow {
     color: var(--text-color);
 }
 
-/* MODERN DARK / LIGHT MODE TOGGLE */
+/* DARK / LIGHT MODE TOGGLE */
 
 #theme-toggle {
     flex-shrink: 0;
@@ -194,8 +185,6 @@ header.shadow {
         border-color 0.3s ease,
         transform 0.3s ease,
         box-shadow 0.3s ease;
-
-    -webkit-tap-highlight-color: transparent;
 }
 
 #theme-toggle i {
@@ -220,15 +209,11 @@ header.shadow {
     transform: scale(0.94);
 }
 
-/* LIGHT MODE TOGGLE */
-
 body:not(.dark-mode) #theme-toggle {
     background: #ffffff;
     color: #4f6df5;
     border-color: #e2e8f0;
 }
-
-/* DARK MODE TOGGLE */
 
 body.dark-mode #theme-toggle {
     background: #172033;
@@ -281,8 +266,6 @@ body.dark-mode #theme-toggle {
     color: var(--light-text);
 }
 
-/* HOME IMAGE */
-
 .home-img {
     display: flex;
     justify-content: center;
@@ -313,10 +296,7 @@ body.dark-mode #theme-toggle {
     border: 1px solid var(--main-color);
     border-radius: var(--radius-sm);
 
-    transition:
-        background 0.3s ease,
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn:hover {
@@ -351,14 +331,6 @@ body.dark-mode #theme-toggle {
 .heading span {
     border-bottom: 3px solid var(--main-color);
 }
-
-.about-title h2 {
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--light-text);
-}
-
-/* ABOUT IMAGE */
 
 .about-img {
     width: 180px;
@@ -407,9 +379,7 @@ body.dark-mode #theme-toggle {
     border-radius: var(--radius-sm);
     background: var(--main-color);
 
-    transition:
-        background 0.3s ease,
-        transform 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .social a .bx:hover {
@@ -440,8 +410,6 @@ body.dark-mode #theme-toggle {
     background: var(--light-bg);
 }
 
-/* CATEGORY TITLES */
-
 .stack-category {
     text-align: center;
     margin-top: 3rem;
@@ -459,8 +427,6 @@ body.dark-mode #theme-toggle {
     color: var(--text-color);
     position: relative;
     padding: 0.65rem 0;
-
-    /* Text only: no background, border or shadow */
     background: transparent;
     border: none;
     border-radius: 0;
@@ -478,8 +444,6 @@ body.dark-mode #theme-toggle {
     transform: translateX(-50%);
     border-radius: 50px;
 }
-
-/* TECH CARDS */
 
 .tech-container {
     display: grid;
@@ -538,78 +502,7 @@ body.dark-mode #theme-toggle {
     transform: scale(1.08);
 }
 
-/* WHAT I BUILD */
-
-.expertise {
-    background: var(--body-bg);
-}
-
-.expertise-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.expertise-container .box {
-    text-align: center;
-    border: 1px solid var(--border-color);
-    padding: 28px 22px;
-    border-radius: var(--radius-md);
-
-    box-shadow: var(--shadow-sm);
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        background 0.3s ease,
-        border-color 0.3s ease;
-
-    background: var(--card-bg);
-}
-
-.expertise-container .box i {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 13px;
-    color: #ffffff;
-    font-size: 26px;
-    background: var(--main-color);
-    border-radius: 12px;
-    transition: background 0.3s ease, color 0.3s ease;
-}
-
-.expertise-container .box h2 {
-    font-size: 1.1rem;
-    margin: 1rem 0 0.6rem;
-    color: var(--text-color);
-}
-
-.expertise-container .box p {
-    line-height: 1.7;
-    font-size: 0.92rem;
-    color: var(--light-text);
-}
-
-.expertise-container .box:hover {
-    background: var(--main-color);
-    color: #ffffff;
-    transform: translateY(-6px);
-    border-color: var(--main-color);
-    box-shadow: 0 14px 28px rgba(79, 109, 245, 0.20);
-}
-
-.expertise-container .box:hover h2,
-.expertise-container .box:hover p {
-    color: #ffffff;
-}
-
-.expertise-container .box:hover i {
-    background: #ffffff;
-    color: var(--main-color);
-}
-
-/* SERVICES */
+/* WHAT I DO (SERVICES) */
 
 .services {
     background: var(--body-bg);
@@ -617,7 +510,7 @@ body.dark-mode #theme-toggle {
 
 .services-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1.5rem;
     margin-top: 2rem;
 }
@@ -687,31 +580,25 @@ body.dark-mode #theme-toggle {
 }
 
 .portfolio-container {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    align-items: stretch;
-    gap: 1.75rem;
-    margin-top: 2rem;
-}
-
-/* PORTFOLIO CARD */
-
-.portfolio-box {
-    min-width: 0;
     display: flex;
     flex-direction: column;
+    gap: 2.5rem;
+    max-width: 1100px;
+    margin: 2rem auto 0;
+}
+
+/* Card: text on the left, image on the right */
+.portfolio-box {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr);
     overflow: hidden;
 
     border: 1px solid var(--border-color);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-md);
     background: var(--card-bg);
+    box-shadow: var(--shadow-md);
 
-    box-shadow: var(--shadow-sm);
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        border-color 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .portfolio-box:hover {
@@ -720,171 +607,110 @@ body.dark-mode #theme-toggle {
     border-color: rgba(79, 109, 245, 0.35);
 }
 
-/* PORTFOLIO IMAGES */
-
+/* Image (right side, even though it comes first in the HTML) */
 .portfolio-box > img {
-    display: block;
-    flex-shrink: 0;
-
+    grid-column: 2;
+    grid-row: 1;
     width: 100%;
-    height: 220px;
-
+    height: 100%;
+    min-height: 320px;
     object-fit: cover;
     object-position: center;
-
-    background: #e5e7eb;
-
+    background: #111827;
     transition: transform 0.4s ease;
 }
 
 .portfolio-box:hover > img {
-    transform: scale(1.025);
+    transform: scale(1.03);
 }
 
-/* PORTFOLIO CONTENT */
-
+/* Content (left side) */
 .portfolio-content {
+    grid-column: 1;
+    grid-row: 1;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: flex-start;
-    flex: 1;
-
-    padding: 1.5rem;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+    background: var(--card-bg);
 }
 
 .portfolio-content h2 {
-    margin-bottom: 0.7rem;
-    font-size: 1.2rem;
-    line-height: 1.45;
+    margin-bottom: 0.8rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--text-color);
 }
 
 .portfolio-content p {
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
     line-height: 1.7;
-    font-size: 0.92rem;
+    font-size: 0.95rem;
     color: var(--light-text);
 }
 
-.portfolio-content > span {
-    display: block;
-    margin-bottom: 1.4rem;
-    line-height: 1.7;
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: var(--main-color);
-    overflow-wrap: anywhere;
+/* Tech tags */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.8rem;
 }
 
-/* PORTFOLIO BUTTON CONTAINER */
+.tech-tags li {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-color);
+    background: var(--light-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
 
+/* Buttons */
 .portfolio-links {
-    width: 100%;
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
     gap: 0.75rem;
-
     margin-top: auto;
-    padding-top: 0.25rem;
 }
 
-/* PORTFOLIO BUTTONS */
-
-.portfolio-links a {
+.btn-project {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.2rem;
 
-    min-width: 105px;
-    padding: 0.7rem 1.1rem;
-
-    border: 1px solid transparent;
-    border-radius: 10px;
-
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     font-weight: 600;
-    line-height: 1.4;
-    text-align: center;
-
-    transition:
-        background 0.25s ease,
-        color 0.25s ease,
-        border-color 0.25s ease,
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-}
-
-/* GITHUB BUTTON */
-
-.portfolio-links a:first-child {
-    background: #24292f;
     color: #ffffff;
-    border-color: #24292f;
-}
-
-.portfolio-links a:first-child:hover {
-    background: #111827;
-    border-color: #111827;
-    color: #ffffff;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(36, 41, 47, 0.18);
-}
-
-/* LIVE DEMO BUTTON */
-/* Applies only when there is more than one link in the card. */
-
-.portfolio-links a:last-child:not(:first-child) {
     background: var(--main-color);
-    color: #ffffff;
-    border-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 8px;
+
+    transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.portfolio-links a:last-child:not(:first-child):hover {
+.btn-project:hover {
     background: var(--accent-hover);
     border-color: var(--accent-hover);
-    color: #ffffff;
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(79, 109, 245, 0.25);
 }
 
-/* PORTFOLIO DARK MODE */
-
-body.dark-mode .portfolio-box {
-    background: var(--card-bg);
+.btn-project.secondary {
+    background: transparent;
+    color: var(--text-color);
     border-color: var(--border-color);
 }
 
-body.dark-mode .portfolio-box > img {
-    background: #111827;
-}
-
-/* GitHub button in dark mode */
-
-body.dark-mode .portfolio-links a:first-child {
-    background: #f3f4f6;
-    color: #111827;
-    border-color: #f3f4f6;
-}
-
-body.dark-mode .portfolio-links a:first-child:hover {
-    background: #ffffff;
-    color: #111827;
-    border-color: #ffffff;
-}
-
-/* Live Demo button in dark mode */
-
-body.dark-mode .portfolio-links a:last-child:not(:first-child) {
+.btn-project.secondary:hover {
     background: var(--main-color);
-    color: #ffffff;
     border-color: var(--main-color);
-}
-
-body.dark-mode .portfolio-links a:last-child:not(:first-child):hover {
-    background: var(--accent-hover);
-    border-color: var(--accent-hover);
+    color: #ffffff;
 }
 
 /* CONTACT */
@@ -929,10 +755,7 @@ form textarea {
     border-radius: 12px;
     color: var(--text-color);
 
-    transition:
-        border-color 0.3s ease,
-        box-shadow 0.3s ease,
-        background 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 form input:focus,
@@ -950,6 +773,13 @@ form textarea::placeholder {
 textarea {
     resize: vertical;
     min-height: 160px;
+}
+
+/* Honeypot (hidden from real users) */
+.hidden-field {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
 }
 
 /* SUBMIT BUTTON */
@@ -971,10 +801,7 @@ form .send-btn {
     border-radius: 10px;
     border: 1px solid var(--main-color);
 
-    transition:
-        background 0.3s ease,
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .send-btn:hover {
@@ -984,6 +811,23 @@ form .send-btn {
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(79, 109, 245, 0.20);
 }
+
+.send-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+#form-status {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.92rem;
+    font-weight: 500;
+}
+
+#form-status.success { color: #16a34a; }
+#form-status.error   { color: #dc2626; }
 
 /* FOOTER */
 
@@ -1052,40 +896,6 @@ body.dark-mode {
     --shadow-lg: 0 16px 35px rgba(0, 0, 0, 0.25);
 }
 
-body.dark-mode header {
-    background: var(--body-bg);
-}
-
-body.dark-mode .navbar a {
-    color: var(--text-color);
-}
-
-body.dark-mode .navbar a:hover {
-    background: var(--main-color);
-    color: #ffffff;
-}
-
-body.dark-mode .techstack,
-body.dark-mode .portfolio {
-    background: var(--light-bg);
-}
-
-body.dark-mode .expertise,
-body.dark-mode .services,
-body.dark-mode .contact {
-    background: var(--body-bg);
-}
-
-body.dark-mode .tech-box,
-body.dark-mode .expertise-container .box,
-body.dark-mode .services-container .box {
-    background: var(--card-bg);
-    border-color: var(--border-color);
-}
-
-/* Note: no dark-mode background rule for .stack-category h2.
-   The category headings remain text-only in both themes. */
-
 /* RESPONSIVE — TABLET */
 
 @media (max-width: 1100px) {
@@ -1114,6 +924,10 @@ body.dark-mode .services-container .box {
     .home-text h1 {
         font-size: 3rem;
     }
+
+    .services-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 @media (max-width: 991px) {
@@ -1123,19 +937,6 @@ body.dark-mode .services-container .box {
 
     section {
         padding: 60px 5%;
-    }
-
-    .portfolio-container {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1.25rem;
-    }
-
-    .portfolio-box > img {
-        height: 200px;
-    }
-
-    .portfolio-content {
-        padding: 1.25rem;
     }
 }
 
@@ -1211,10 +1012,7 @@ body.dark-mode .services-container .box {
 
         transform: translateY(-8px);
 
-        transition:
-            opacity 0.25s ease,
-            visibility 0.25s ease,
-            transform 0.25s ease;
+        transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
 
         z-index: 1001;
     }
@@ -1303,43 +1101,33 @@ body.dark-mode .services-container .box {
         font-size: 0.9rem;
     }
 
-    /* WHAT I BUILD */
-
-    .expertise-container {
-        grid-template-columns: 1fr;
-    }
-
-    .expertise-container .box {
-        border-radius: 16px;
-    }
-
     /* SERVICES */
-
-    .services-container {
-        grid-template-columns: 1fr;
-    }
 
     .services-container .box {
         border-radius: 16px;
     }
 
-    /* PORTFOLIO */
+    /* PORTFOLIO: image on top, text below */
 
     .portfolio-container {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 1.75rem;
     }
 
     .portfolio-box {
-        border-radius: 18px;
+        grid-template-columns: 1fr;
     }
 
     .portfolio-box > img {
-        height: 230px;
+        grid-column: 1;
+        grid-row: 1;
+        min-height: 0;
+        height: 220px;
     }
 
     .portfolio-content {
-        padding: 1.3rem;
+        grid-column: 1;
+        grid-row: 2;
+        padding: 1.5rem;
     }
 
     /* ABOUT */
@@ -1384,12 +1172,8 @@ body.dark-mode .services-container .box {
         font-size: 1.5rem;
     }
 
-    .contact-form form {
-        width: 100%;
-    }
-
-    .portfolio-box > img {
-        height: 220px;
+    .services-container {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -1430,26 +1214,20 @@ body.dark-mode .services-container .box {
     }
 
     .portfolio-box > img {
-        height: 210px;
+        height: 200px;
     }
 
     .portfolio-content h2 {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
     }
 
     .portfolio-content p {
         font-size: 0.9rem;
     }
 
-    .portfolio-links {
-        gap: 0.6rem;
-    }
-
-    .portfolio-links a {
+    .btn-project {
         flex: 1;
-        min-width: 0;
-        padding: 0.7rem 0.6rem;
-        font-size: 0.82rem;
+        justify-content: center;
     }
 
     .tech-container {
@@ -1503,16 +1281,11 @@ body.dark-mode .services-container .box {
         font-size: 1.35rem;
     }
 
-    .about-title h2 {
-        font-size: 0.9rem;
-    }
-
     .tech-container {
         grid-template-columns: 1fr;
     }
 
     .tech-box,
-    .expertise-container .box,
     .services-container .box {
         border-radius: 14px;
     }
@@ -1531,7 +1304,7 @@ body.dark-mode .services-container .box {
         width: 100%;
     }
 
-    .portfolio-links a {
+    .btn-project {
         width: 100%;
         flex: initial;
     }

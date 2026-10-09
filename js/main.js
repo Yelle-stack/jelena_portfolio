@@ -1,7 +1,8 @@
 const menu = document.querySelector("#menu-icon");
 const navbar = document.querySelector(".navbar");
 const header = document.querySelector("header");
-const form = document.querySelector("form");
+const form = document.querySelector("#contact-form");
+const formStatus = document.querySelector("#form-status");
 const year = document.getElementById("year");
 const themeToggle = document.querySelector("#theme-toggle");
 
@@ -12,35 +13,35 @@ if (themeToggle) {
     const themeIcon = themeToggle.querySelector("i");
 
     function updateTheme(isDark) {
-        // Apply theme
         document.body.classList.toggle("dark-mode", isDark);
 
-        // Update icon
         if (themeIcon) {
             themeIcon.classList.remove("bx-sun", "bx-moon");
             themeIcon.classList.add(isDark ? "bx-sun" : "bx-moon");
         }
 
-        // Update accessibility label
         themeToggle.setAttribute(
             "aria-label",
             isDark ? "Switch to light mode" : "Switch to dark mode"
         );
 
-        // Save theme preference
-        localStorage.setItem("theme", isDark ? "dark" : "light");
+        try {
+            localStorage.setItem("theme", isDark ? "dark" : "light");
+        } catch (error) {
+            // localStorage unavailable (private mode): ignore
+        }
     }
 
-    // Default theme: Dark mode
-    const savedTheme = localStorage.getItem("theme");
-
-    if (savedTheme === "light") {
-        updateTheme(false);
-    } else {
-        updateTheme(true);
+    // Default theme: dark mode, unless the visitor previously chose light
+    let savedTheme = null;
+    try {
+        savedTheme = localStorage.getItem("theme");
+    } catch (error) {
+        savedTheme = null;
     }
 
-    // Toggle theme on click
+    updateTheme(savedTheme !== "light");
+
     themeToggle.addEventListener("click", () => {
         const isDark = !document.body.classList.contains("dark-mode");
         updateTheme(isDark);
@@ -56,7 +57,7 @@ if (menu && navbar) {
         navbar.classList.toggle("active");
     });
 
-    // Close mobile menu when a navigation link is clicked
+    // Close the mobile menu when a navigation link is clicked
     document.querySelectorAll(".navbar a").forEach((link) => {
         link.addEventListener("click", () => {
             menu.classList.remove("bx-x");
@@ -66,16 +67,9 @@ if (menu && navbar) {
 }
 
 
-// Header Shadow + Close Mobile Menu
+// Header shadow on scroll
 
 window.addEventListener("scroll", () => {
-    // Close mobile menu on scroll
-    if (menu && navbar) {
-        menu.classList.remove("bx-x");
-        navbar.classList.remove("active");
-    }
-
-    // Add shadow to header when scrolling
     if (header) {
         header.classList.toggle("shadow", window.scrollY > 0);
     }
@@ -94,9 +88,10 @@ if (year) {
 if (typeof ScrollReveal === "function") {
     const sr = ScrollReveal({
         distance: "60px",
-        duration: 2500,
-        delay: 300,
-        reset: false
+        duration: 1500,
+        delay: 200,
+        reset: false,
+        cleanup: true // removes inline styles after reveal, so hover effects keep working
     });
 
     sr.reveal(".home-text", {
@@ -109,7 +104,7 @@ if (typeof ScrollReveal === "function") {
     });
 
     sr.reveal(
-        ".about-title, .about-text, .heading, .box, .tech-box, .stack-category, .expertise-box, input, textarea, .social a",
+        ".about-title, .about-text, .heading, .box, .portfolio-box, .tech-box, .stack-category, .contact-form form, .social a",
         {
             origin: "bottom",
             interval: 100
@@ -118,17 +113,50 @@ if (typeof ScrollReveal === "function") {
 }
 
 
-// Anti-bot Protection
+// Contact form (fetch + anti-bot delay)
 
-const startTime = Date.now();
+const pageLoadTime = Date.now();
 
-if (form) {
-    form.addEventListener("submit", (e) => {
-        const elapsedTime = Date.now() - startTime;
+function showStatus(message, type) {
+    if (!formStatus) return;
+    formStatus.textContent = message;
+    formStatus.className = type; // "success" or "error"
+}
 
-        if (elapsedTime < 5000) {
-            e.preventDefault();
-            alert("Please wait a few seconds before submitting the form.");
+if (form && formStatus) {
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        // Anti-bot: too fast = probably a bot
+        if (Date.now() - pageLoadTime < 5000) {
+            showStatus("Please wait a few seconds before sending.", "error");
+            return;
+        }
+
+        const button = form.querySelector(".send-btn");
+        button.disabled = true;
+        button.textContent = "Sending...";
+        showStatus("", "");
+
+        try {
+            const response = await fetch(form.action, {
+                method: "POST",
+                headers: { Accept: "application/json" },
+                body: new FormData(form)
+            });
+            const data = await response.json();
+
+            if (response.ok && data.success) {
+                showStatus("Thank you! Your message has been sent.", "success");
+                form.reset();
+            } else {
+                throw new Error(data.message || "Request failed");
+            }
+        } catch (error) {
+            showStatus("Something went wrong. Please try again or email me directly.", "error");
+        } finally {
+            button.disabled = false;
+            button.textContent = "Send";
         }
     });
 }

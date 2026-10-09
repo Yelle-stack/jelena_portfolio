@@ -167,7 +167,6 @@ header.shadow {
 
 #theme-toggle {
     flex-shrink: 0;
-
     position: relative;
     z-index: 1004;
 
@@ -187,7 +186,6 @@ header.shadow {
     color: var(--main-color);
 
     cursor: pointer;
-
     box-shadow: var(--shadow-sm);
 
     transition:
@@ -205,7 +203,6 @@ header.shadow {
     font-size: 1.4rem;
     line-height: 1;
     pointer-events: none;
-
     transition: transform 0.4s ease;
 }
 
@@ -223,7 +220,7 @@ header.shadow {
     transform: scale(0.94);
 }
 
-/* Light mode toggle */
+/* LIGHT MODE TOGGLE */
 
 body:not(.dark-mode) #theme-toggle {
     background: #ffffff;
@@ -231,7 +228,7 @@ body:not(.dark-mode) #theme-toggle {
     border-color: #e2e8f0;
 }
 
-/* Dark mode toggle */
+/* DARK MODE TOGGLE */
 
 body.dark-mode #theme-toggle {
     background: #172033;
@@ -463,7 +460,7 @@ body.dark-mode #theme-toggle {
     position: relative;
     padding: 0.65rem 0;
 
-    /* Text only */
+    /* Text only: no background, border or shadow */
     background: transparent;
     border: none;
     border-radius: 0;
@@ -836,14 +833,15 @@ body.dark-mode #theme-toggle {
 }
 
 /* LIVE DEMO BUTTON */
+/* Applies only when there is more than one link in the card. */
 
-.portfolio-links a:last-child {
+.portfolio-links a:last-child:not(:first-child) {
     background: var(--main-color);
     color: #ffffff;
     border-color: var(--main-color);
 }
 
-.portfolio-links a:last-child:hover {
+.portfolio-links a:last-child:not(:first-child):hover {
     background: var(--accent-hover);
     border-color: var(--accent-hover);
     color: #ffffff;
@@ -878,13 +876,13 @@ body.dark-mode .portfolio-links a:first-child:hover {
 
 /* Live Demo button in dark mode */
 
-body.dark-mode .portfolio-links a:last-child {
+body.dark-mode .portfolio-links a:last-child:not(:first-child) {
     background: var(--main-color);
     color: #ffffff;
     border-color: var(--main-color);
 }
 
-body.dark-mode .portfolio-links a:last-child:hover {
+body.dark-mode .portfolio-links a:last-child:not(:first-child):hover {
     background: var(--accent-hover);
     border-color: var(--accent-hover);
 }
@@ -1085,10 +1083,8 @@ body.dark-mode .services-container .box {
     border-color: var(--border-color);
 }
 
-body.dark-mode .stack-category h2 {
-    background: var(--card-bg);
-    border-color: var(--border-color);
-}
+/* Note: no dark-mode background rule for .stack-category h2.
+   The category headings remain text-only in both themes. */
 
 /* RESPONSIVE — TABLET */
 

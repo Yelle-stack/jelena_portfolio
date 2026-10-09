@@ -463,6 +463,7 @@ body.dark-mode #theme-toggle {
     position: relative;
     padding: 0.65rem 0;
 
+    /* Text only */
     background: transparent;
     border: none;
     border-radius: 0;

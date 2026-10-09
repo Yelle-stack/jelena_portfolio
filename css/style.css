@@ -465,7 +465,7 @@ body.dark-mode #theme-toggle {
 
     background: var(--card-bg);
     border: 1px solid var(--border-color);
-    border-radius: 0;
+   
 
     box-shadow: var(--shadow-sm);
 }
@@ -479,7 +479,7 @@ body.dark-mode #theme-toggle {
     bottom: -2px;
     left: 50%;
     transform: translateX(-50%);
-    border-radius: 50px;
+   
 }
 
 /* TECH CARDS */

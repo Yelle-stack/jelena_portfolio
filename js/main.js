@@ -1,55 +1,59 @@
-
 const menu = document.querySelector("#menu-icon");
 const navbar = document.querySelector(".navbar");
 const header = document.querySelector("header");
-const form = document.querySelector("form");
+const form = document.querySelector(".contact-form");
 const year = document.getElementById("year");
 const themeToggle = document.querySelector("#theme-toggle");
 
-
-// Dark / Light Mode
+// DARK / LIGHT MODE
 
 if (themeToggle) {
     const themeIcon = themeToggle.querySelector("i");
 
     function updateTheme(isDark) {
-        // Apply theme
         document.body.classList.toggle("dark-mode", isDark);
 
-        // Update icon
         if (themeIcon) {
             themeIcon.classList.remove("bx-sun", "bx-moon");
             themeIcon.classList.add(isDark ? "bx-sun" : "bx-moon");
         }
 
-        // Update accessibility label
         themeToggle.setAttribute(
             "aria-label",
             isDark ? "Switch to light mode" : "Switch to dark mode"
         );
 
-        // Save theme preference
-        localStorage.setItem("theme", isDark ? "dark" : "light");
+        themeToggle.setAttribute(
+            "title",
+            isDark ? "Switch to light mode" : "Switch to dark mode"
+        );
+
+        try {
+            localStorage.setItem("theme", isDark ? "dark" : "light");
+        } catch (error) {
+            // Theme still works if local storage is unavailable.
+        }
     }
 
-    // Default theme: Dark mode
-    const savedTheme = localStorage.getItem("theme");
+    // Restore saved theme; default to dark mode.
+    let savedTheme = null;
 
-    if (savedTheme === "light") {
-        updateTheme(false);
-    } else {
-        updateTheme(true);
+    try {
+        savedTheme = localStorage.getItem("theme");
+    } catch (error) {
+        // Use the default theme if local storage is unavailable.
     }
 
-    // Toggle theme on click
+    updateTheme(savedTheme !== "light");
+
+    // Works on desktop and mobile.
     themeToggle.addEventListener("click", () => {
         const isDark = !document.body.classList.contains("dark-mode");
         updateTheme(isDark);
     });
 }
 
-
-// Mobile Menu
+// MOBILE MENU
 
 if (menu && navbar) {
     menu.addEventListener("click", () => {
@@ -57,7 +61,7 @@ if (menu && navbar) {
         navbar.classList.toggle("active");
     });
 
-    // Close mobile menu when a navigation link is clicked
+    // Close menu after clicking a navigation link.
     document.querySelectorAll(".navbar a").forEach((link) => {
         link.addEventListener("click", () => {
             menu.classList.remove("bx-x");
@@ -66,38 +70,34 @@ if (menu && navbar) {
     });
 }
 
-
-// Header Shadow + Close Mobile Menu
+// HEADER SHADOW
 
 window.addEventListener("scroll", () => {
-    // Close mobile menu on scroll
     if (menu && navbar) {
         menu.classList.remove("bx-x");
         navbar.classList.remove("active");
     }
 
-    // Add shadow to header when scrolling
     if (header) {
         header.classList.toggle("shadow", window.scrollY > 0);
     }
 });
 
-
-// Current Year
+// CURRENT YEAR
 
 if (year) {
     year.textContent = new Date().getFullYear();
 }
 
-
-// ScrollReveal Animations
+// SCROLL REVEAL ANIMATIONS
 
 if (typeof ScrollReveal === "function") {
     const sr = ScrollReveal({
-        distance: "60px",
-        duration: 2500,
-        delay: 300,
-        reset: false
+        distance: "40px",
+        duration: 900,
+        delay: 100,
+        reset: false,
+        mobile: true
     });
 
     sr.reveal(".home-text", {
@@ -105,30 +105,29 @@ if (typeof ScrollReveal === "function") {
     });
 
     sr.reveal(".home-img", {
-        delay: 400,
-        origin: "right"
+        origin: "right",
+        delay: 200
     });
 
     sr.reveal(
-        ".about-title, .about-text, .heading, .box, .tech-box, .stack-category, .expertise-box, input, textarea, .social a",
+        ".about-title, .about-text, .heading, .tech-box, .stack-category, .expertise-box, .portfolio-box, .contact-form, .contact-text, .social a",
         {
             origin: "bottom",
-            interval: 100
+            interval: 80
         }
     );
 }
 
-
-// Anti-bot Protection
+// ANTI-BOT PROTECTION
 
 const startTime = Date.now();
 
 if (form) {
-    form.addEventListener("submit", (e) => {
+    form.addEventListener("submit", (event) => {
         const elapsedTime = Date.now() - startTime;
 
         if (elapsedTime < 5000) {
-            e.preventDefault();
+            event.preventDefault();
             alert("Please wait a few seconds before submitting the form.");
         }
     });

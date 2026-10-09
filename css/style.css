@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 /* GLOBAL */
@@ -680,31 +679,34 @@ body.dark-mode #theme-toggle {
     color: var(--main-color);
 }
 
-/* PORTFOLIO */
+/* ========================================
+   PORTFOLIO — HORIZONTAL PROJECT CARDS
+======================================== */
 
 .portfolio {
     background: var(--light-bg);
 }
 
 .portfolio-container {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    align-items: stretch;
-    gap: 1.75rem;
-    margin-top: 2rem;
-}
-
-/* PORTFOLIO CARD */
-
-.portfolio-box {
-    min-width: 0;
     display: flex;
     flex-direction: column;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+/* PROJECT CARD */
+
+.portfolio-box {
+    display: grid;
+    grid-template-columns: minmax(250px, 0.8fr) minmax(0, 1.6fr);
+    align-items: stretch;
+
+    min-width: 0;
     overflow: hidden;
 
+    background: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-lg);
-    background: var(--card-bg);
 
     box-shadow: var(--shadow-sm);
 
@@ -715,95 +717,96 @@ body.dark-mode #theme-toggle {
 }
 
 .portfolio-box:hover {
-    transform: translateY(-6px);
+    transform: translateY(-4px);
+    border-color: rgba(79, 109, 245, 0.4);
     box-shadow: var(--shadow-lg);
-    border-color: rgba(79, 109, 245, 0.35);
 }
 
-/* PORTFOLIO IMAGES */
-
-.portfolio-box > img {
-    display: block;
-    flex-shrink: 0;
-
-    width: 100%;
-    height: 220px;
-
-    object-fit: cover;
-    object-position: center;
-
-    background: #e5e7eb;
-
-    transition: transform 0.4s ease;
-}
-
-.portfolio-box:hover > img {
-    transform: scale(1.025);
-}
-
-/* PORTFOLIO CONTENT */
+/* PROJECT CONTENT — LEFT SIDE */
 
 .portfolio-content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    flex: 1;
 
-    padding: 1.5rem;
+    min-width: 0;
+    padding: 2rem;
 }
 
 .portfolio-content h2 {
-    margin-bottom: 0.7rem;
-    font-size: 1.2rem;
-    line-height: 1.45;
-    font-weight: 600;
+    margin-bottom: 0.9rem;
+
+    font-size: 1.45rem;
+    font-weight: 700;
+    line-height: 1.4;
+
     color: var(--text-color);
 }
 
 .portfolio-content p {
-    margin-bottom: 1rem;
-    line-height: 1.7;
-    font-size: 0.92rem;
+    margin-bottom: 1.25rem;
+
+    font-size: 0.93rem;
+    line-height: 1.75;
+
     color: var(--light-text);
 }
 
-.portfolio-content > span {
-    display: block;
-    margin-bottom: 1.4rem;
-    line-height: 1.7;
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: var(--main-color);
+/* TECHNOLOGY BADGES */
+
+.portfolio-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+
+    margin-bottom: 1.7rem;
+}
+
+.portfolio-tech span {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 0.55rem 0.8rem;
+
+    border: 1px solid var(--border-color);
+    border-radius: 7px;
+
+    background: var(--light-bg);
+    color: var(--text-color);
+
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.4;
+
     overflow-wrap: anywhere;
 }
 
-/* PORTFOLIO BUTTON CONTAINER */
+/* PROJECT LINKS */
 
 .portfolio-links {
-    width: 100%;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 0.75rem;
+    gap: 0.7rem;
 
+    width: 100%;
     margin-top: auto;
-    padding-top: 0.25rem;
+    padding-top: 0.3rem;
 }
-
-/* PORTFOLIO BUTTONS */
 
 .portfolio-links a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    gap: 0.5rem;
 
-    min-width: 105px;
-    padding: 0.7rem 1.1rem;
+    min-width: 115px;
+    padding: 0.75rem 1rem;
 
     border: 1px solid transparent;
-    border-radius: 10px;
+    border-radius: 8px;
 
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     font-weight: 600;
     line-height: 1.4;
     text-align: center;
@@ -816,7 +819,7 @@ body.dark-mode #theme-toggle {
         box-shadow 0.25s ease;
 }
 
-/* GITHUB BUTTON */
+/* GITHUB */
 
 .portfolio-links a:first-child {
     background: #24292f;
@@ -828,12 +831,12 @@ body.dark-mode #theme-toggle {
     background: #111827;
     border-color: #111827;
     color: #ffffff;
+
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(36, 41, 47, 0.18);
 }
 
-/* LIVE DEMO BUTTON */
-/* Applies only when there is more than one link in the card. */
+/* LIVE DEMO */
 
 .portfolio-links a:last-child:not(:first-child) {
     background: var(--main-color);
@@ -845,22 +848,65 @@ body.dark-mode #theme-toggle {
     background: var(--accent-hover);
     border-color: var(--accent-hover);
     color: #ffffff;
+
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(79, 109, 245, 0.25);
 }
 
-/* PORTFOLIO DARK MODE */
+/* PROJECT IMAGE — RIGHT SIDE */
+
+.portfolio-image {
+    position: relative;
+    min-width: 0;
+    min-height: 330px;
+    overflow: hidden;
+
+    background: var(--light-bg);
+}
+
+.portfolio-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+    min-height: 330px;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.5s ease;
+}
+
+.portfolio-box:hover .portfolio-image img {
+    transform: scale(1.025);
+}
+
+/* DARK MODE */
+
+body.dark-mode .portfolio {
+    background: var(--light-bg);
+}
 
 body.dark-mode .portfolio-box {
     background: var(--card-bg);
     border-color: var(--border-color);
 }
 
-body.dark-mode .portfolio-box > img {
+body.dark-mode .portfolio-box:hover {
+    border-color: rgba(109, 131, 255, 0.5);
+}
+
+body.dark-mode .portfolio-tech span {
+    background: var(--body-bg);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .portfolio-image {
     background: #111827;
 }
 
-/* GitHub button in dark mode */
+/* GITHUB BUTTON — DARK MODE */
 
 body.dark-mode .portfolio-links a:first-child {
     background: #f3f4f6;
@@ -874,7 +920,7 @@ body.dark-mode .portfolio-links a:first-child:hover {
     border-color: #ffffff;
 }
 
-/* Live Demo button in dark mode */
+/* LIVE DEMO — DARK MODE */
 
 body.dark-mode .portfolio-links a:last-child:not(:first-child) {
     background: var(--main-color);
@@ -885,6 +931,145 @@ body.dark-mode .portfolio-links a:last-child:not(:first-child) {
 body.dark-mode .portfolio-links a:last-child:not(:first-child):hover {
     background: var(--accent-hover);
     border-color: var(--accent-hover);
+}
+
+/* PORTFOLIO — TABLET */
+
+@media (max-width: 991px) {
+    .portfolio-container {
+        gap: 1.5rem;
+    }
+
+    .portfolio-box {
+        grid-template-columns: minmax(220px, 0.9fr) minmax(0, 1.3fr);
+    }
+
+    .portfolio-content {
+        padding: 1.5rem;
+    }
+
+    .portfolio-content h2 {
+        font-size: 1.25rem;
+    }
+
+    .portfolio-image,
+    .portfolio-image img {
+        min-height: 300px;
+    }
+}
+
+/* PORTFOLIO — MOBILE */
+
+@media (max-width: 768px) {
+    .portfolio-container {
+        gap: 1.5rem;
+    }
+
+    .portfolio-box {
+        grid-template-columns: minmax(0, 1fr);
+        border-radius: var(--radius-md);
+    }
+
+    .portfolio-content {
+        order: 1;
+        padding: 1.5rem;
+    }
+
+    .portfolio-image {
+        order: 2;
+        min-height: 0;
+        height: 260px;
+    }
+
+    .portfolio-image img {
+        min-height: 0;
+        height: 100%;
+    }
+
+    .portfolio-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .portfolio-content p {
+        font-size: 0.9rem;
+    }
+}
+
+/* PORTFOLIO — SMALL MOBILE */
+
+@media (max-width: 480px) {
+    .portfolio-content {
+        padding: 1.2rem;
+    }
+
+    .portfolio-content h2 {
+        font-size: 1.1rem;
+    }
+
+    .portfolio-tech {
+        gap: 0.45rem;
+    }
+
+    .portfolio-tech span {
+        padding: 0.45rem 0.6rem;
+        font-size: 0.74rem;
+    }
+
+    .portfolio-links {
+        gap: 0.6rem;
+    }
+
+    .portfolio-links a {
+        flex: 1;
+        min-width: 0;
+        padding: 0.7rem 0.55rem;
+        font-size: 0.82rem;
+    }
+
+    .portfolio-image {
+        height: 220px;
+    }
+}
+
+/* PORTFOLIO — EXTRA SMALL MOBILE */
+
+@media (max-width: 350px) {
+    .portfolio-content {
+        padding: 1rem;
+    }
+
+    .portfolio-links {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .portfolio-links a {
+        width: 100%;
+        flex: initial;
+    }
+
+    .portfolio-image {
+        height: 185px;
+    }
+}
+
+/* PORTFOLIO — REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+    .portfolio-box,
+    .portfolio-links a,
+    .portfolio-image img {
+        transition: none;
+    }
+
+    .portfolio-box:hover,
+    .portfolio-links a:hover {
+        transform: none;
+    }
+
+    .portfolio-box:hover .portfolio-image img {
+        transform: none;
+    }
 }
 
 /* CONTACT */
@@ -1083,8 +1268,7 @@ body.dark-mode .services-container .box {
     border-color: var(--border-color);
 }
 
-/* Note: no dark-mode background rule for .stack-category h2.
-   The category headings remain text-only in both themes. */
+/* Category titles remain text-only in both themes. */
 
 /* RESPONSIVE — TABLET */
 
@@ -1123,19 +1307,6 @@ body.dark-mode .services-container .box {
 
     section {
         padding: 60px 5%;
-    }
-
-    .portfolio-container {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1.25rem;
-    }
-
-    .portfolio-box > img {
-        height: 200px;
-    }
-
-    .portfolio-content {
-        padding: 1.25rem;
     }
 }
 
@@ -1323,25 +1494,6 @@ body.dark-mode .services-container .box {
         border-radius: 16px;
     }
 
-    /* PORTFOLIO */
-
-    .portfolio-container {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .portfolio-box {
-        border-radius: 18px;
-    }
-
-    .portfolio-box > img {
-        height: 230px;
-    }
-
-    .portfolio-content {
-        padding: 1.3rem;
-    }
-
     /* ABOUT */
 
     .about {
@@ -1387,10 +1539,6 @@ body.dark-mode .services-container .box {
     .contact-form form {
         width: 100%;
     }
-
-    .portfolio-box > img {
-        height: 220px;
-    }
 }
 
 /* RESPONSIVE — VERY SMALL MOBILE */
@@ -1427,29 +1575,6 @@ body.dark-mode .services-container .box {
 
     .home-img img {
         width: 200px;
-    }
-
-    .portfolio-box > img {
-        height: 210px;
-    }
-
-    .portfolio-content h2 {
-        font-size: 1.1rem;
-    }
-
-    .portfolio-content p {
-        font-size: 0.9rem;
-    }
-
-    .portfolio-links {
-        gap: 0.6rem;
-    }
-
-    .portfolio-links a {
-        flex: 1;
-        min-width: 0;
-        padding: 0.7rem 0.6rem;
-        font-size: 0.82rem;
     }
 
     .tech-container {
@@ -1515,25 +1640,6 @@ body.dark-mode .services-container .box {
     .expertise-container .box,
     .services-container .box {
         border-radius: 14px;
-    }
-
-    .portfolio-box > img {
-        height: 185px;
-    }
-
-    .portfolio-content {
-        padding: 1rem;
-    }
-
-    .portfolio-links {
-        flex-direction: column;
-        align-items: stretch;
-        width: 100%;
-    }
-
-    .portfolio-links a {
-        width: 100%;
-        flex: initial;
     }
 }
 

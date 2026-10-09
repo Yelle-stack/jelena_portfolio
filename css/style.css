@@ -461,13 +461,12 @@ body.dark-mode #theme-toggle {
     font-weight: 600;
     color: var(--text-color);
     position: relative;
-    padding: 0.65rem 1.4rem;
+    padding: 0.65rem 0;
 
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-   
-
-    box-shadow: var(--shadow-sm);
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 .stack-category h2::after {
@@ -479,7 +478,7 @@ body.dark-mode #theme-toggle {
     bottom: -2px;
     left: 50%;
     transform: translateX(-50%);
-   
+    border-radius: 50px;
 }
 
 /* TECH CARDS */

@@ -479,7 +479,7 @@ body.dark-mode #theme-toggle {
     bottom: -2px;
     left: 50%;
     transform: translateX(-50%);
-    border-radius: 50px;
+    border-radius: 0;
 }
 
 /* TECH CARDS */

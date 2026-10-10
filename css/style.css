@@ -630,11 +630,24 @@ body.dark-mode #theme-toggle {
 .portfolio-box > img.img-contain {
     object-fit: contain;
     object-position: center;
-    background: #27272a; /* same dark grey as the screenshot, so empty bands are invisible */
+    background: #27272a; /* same dark grey as the screenshot */
 }
 
 .portfolio-box:hover > img.img-contain {
-    transform: none; /* no zoom, otherwise the edges get cropped */
+    transform: none;
+}
+
+/* Alternate cards: image on the left, text on the right */
+.portfolio-box:nth-child(even) {
+    grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+}
+
+.portfolio-box:nth-child(even) > img {
+    grid-column: 1;
+}
+
+.portfolio-box:nth-child(even) .portfolio-content {
+    grid-column: 2;
 }
 
 /* Content (left side) */
@@ -1120,17 +1133,19 @@ body.dark-mode {
         border-radius: 16px;
     }
 
-    /* PORTFOLIO: image on top, text below */
+    /* PORTFOLIO: image on top, text below (all cards) */
 
     .portfolio-container {
         gap: 1.75rem;
     }
 
-    .portfolio-box {
+    .portfolio-box,
+    .portfolio-box:nth-child(even) {
         grid-template-columns: 1fr;
     }
 
-    .portfolio-box > img {
+    .portfolio-box > img,
+    .portfolio-box:nth-child(even) > img {
         grid-column: 1;
         grid-row: 1;
         min-height: 0;
@@ -1138,11 +1153,13 @@ body.dark-mode {
     }
 
     /* DeepSeek image: natural height, fully visible */
-    .portfolio-box > img.img-contain {
+    .portfolio-box > img.img-contain,
+    .portfolio-box:nth-child(even) > img.img-contain {
         height: auto;
     }
 
-    .portfolio-content {
+    .portfolio-content,
+    .portfolio-box:nth-child(even) .portfolio-content {
         grid-column: 1;
         grid-row: 2;
         padding: 1.5rem;
@@ -1231,11 +1248,13 @@ body.dark-mode {
         width: 200px;
     }
 
-    .portfolio-box > img {
+    .portfolio-box > img,
+    .portfolio-box:nth-child(even) > img {
         height: 200px;
     }
 
-    .portfolio-box > img.img-contain {
+    .portfolio-box > img.img-contain,
+    .portfolio-box:nth-child(even) > img.img-contain {
         height: auto;
     }
 
@@ -1312,11 +1331,13 @@ body.dark-mode {
         border-radius: 14px;
     }
 
-    .portfolio-box > img {
+    .portfolio-box > img,
+    .portfolio-box:nth-child(even) > img {
         height: 185px;
     }
 
-    .portfolio-box > img.img-contain {
+    .portfolio-box > img.img-contain,
+    .portfolio-box:nth-child(even) > img.img-contain {
         height: auto;
     }
 

@@ -352,7 +352,7 @@ body.dark-mode #theme-toggle {
 }
 
 .about-text p {
-    text-align: justify;
+    text-align: left;
     margin-bottom: 1rem;
     line-height: 1.8;
     color: var(--light-text);
